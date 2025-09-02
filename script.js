@@ -14,11 +14,11 @@ const debatersData = {
         matches: []
     },
     'RANZT': {
-        country: 'Indonesia 🇮🇩',
+        country: 'INDONESIA',
         age: 'UNKNOWN',
-        community: 'DBA Official',
+        community: 'DBA',
         status: 'ACTIVE',
-        division: 'Mid Tier',
+        division: 'MID TIER',
         imageUrl: 'images/ranzt_profile.jpg',
         record: { W: 1, L: 0, D: 0 },
         breakdown: {
@@ -28,11 +28,11 @@ const debatersData = {
         matches: []
     },
     'ZOGRATIS': {
-        country: 'Indonesia 🇮🇩',
+        country: 'INDONESIA',
         age: 'UNKNOWN',
-        community: 'Community A',
+        community: 'DBA',
         status: 'ACTIVE',
-        division: 'High Tier',
+        division: 'HIGH TIER',
         imageUrl: 'images/zogratis_profile.jpg',
         record: { W: 1, L: 1, D: 0 },
         breakdown: {
@@ -42,11 +42,11 @@ const debatersData = {
         matches: []
     },
     'PRATAMA': {
-        country: 'Indonesia 🇮🇩',
+        country: 'INDONESIA',
         age: 'UNKNOWN',
-        community: 'Community B',
+        community: 'DBA',
         status: 'ACTIVE',
-        division: 'High Tier',
+        division: 'HIGH TIER',
         imageUrl: 'images/pratama_profile.jpg',
         record: { W: 1, L: 0, D: 0 },
         breakdown: {
@@ -56,11 +56,11 @@ const debatersData = {
         matches: []
     },
     'AHENG': {
-        country: 'Indonesia 🇮🇩',
+        country: 'INDONESIA',
         age: 'UNKNOWN',
-        community: 'Community A',
+        community: 'DBA',
         status: 'ACTIVE',
-        division: 'High Tier',
+        division: 'HIGH TIER',
         imageUrl: 'images/aheng_profile.jpg',
         record: { W: 0, L: 1, D: 0 },
         breakdown: {
@@ -70,11 +70,11 @@ const debatersData = {
         matches: []
     },
     'ARYANWT': {
-        country: 'Indonesia 🇮🇩',
+        country: 'INDONESIA',
         age: 'UNKNOWN',
-        community: 'DBA Official',
+        community: 'DBA',
         status: 'ACTIVE',
-        division: 'High Tier',
+        division: 'HIGH TIER',
         imageUrl: 'images/aryanwt_profile.jpg',
         record: { W: 1, L: 1, D: 0 },
         breakdown: {
@@ -84,11 +84,11 @@ const debatersData = {
         matches: []
     },
     'THINZEL': {
-        country: 'Indonesia 🇮🇩',
+        country: 'INDONESIA',
         age: 'UNKNOWN',
-        community: 'Community C',
+        community: 'DBA',
         status: 'ACTIVE',
-        division: 'Low Tier',
+        division: 'LOW TIER',
         imageUrl: 'images/thinzel_profile.jpg',
         record: { W: 0, L: 1, D: 0 },
         breakdown: {
@@ -98,11 +98,11 @@ const debatersData = {
         matches: []
     },
     'LIANX': {
-        country: 'Indonesia 🇮🇩',
+        country: 'INDONESIA',
         age: 'UNKNOWN',
-        community: 'DBA Official',
+        community: 'DBA',
         status: 'ACTIVE',
-        division: 'High Tier',
+        division: 'HIGH TIER',
         imageUrl: 'images/lianx_profile.jpg',
         record: { W: 1, L: 0, D: 0 },
         breakdown: {
@@ -112,11 +112,11 @@ const debatersData = {
         matches: []
     },
     'VALEN': {
-        country: 'Indonesia 🇮🇩',
+        country: 'INDONESIA',
         age: 'UNKNOWN',
-        community: 'Community A',
+        community: 'DBA',
         status: 'ACTIVE',
-        division: 'Mid Tier',
+        division: 'MID TIER',
         imageUrl: 'images/valen_profile.jpg',
         record: { W: 0, L: 0, D: 0 },
         breakdown: {
@@ -126,11 +126,11 @@ const debatersData = {
         matches: []
     },
     'KUREJI': {
-        country: 'Indonesia 🇮🇩',
+        country: 'INDONESIA',
         age: 'UNKNOWN',
-        community: 'Community B',
+        community: 'DBA',
         status: 'ACTIVE',
-        division: 'Low Tier',
+        division: 'LOW TIER',
         imageUrl: 'images/kureji_profile.jpg',
         record: { W: 0, L: 0, D: 0 },
         breakdown: {
@@ -140,11 +140,11 @@ const debatersData = {
         matches: []
     },
     'KARIZ': {
-        country: 'Indonesia 🇮🇩',
+        country: 'INDONESIA',
         age: 'UNKNOWN',
-        community: 'Community A',
+        community: 'DBA',
         status: 'ACTIVE',
-        division: 'High Tier',
+        division: 'HIGH TIER',
         imageUrl: 'images/kariz_profile.jpg',
         record: { W: 0, L: 0, D: 0 },
         breakdown: {
@@ -154,11 +154,11 @@ const debatersData = {
         matches: []
     },
     'FARRAS': {
-        country: 'Indonesia 🇮🇩',
+        country: 'INDONESIA',
         age: 'UNKNOWN',
-        community: 'Community B',
+        community: 'DBA',
         status: 'ACTIVE',
-        division: 'Low Tier',
+        division: 'LOW TIER',
         imageUrl: 'images/farras_profile.jpg',
         record: { W: 0, L: 0, D: 0 },
         breakdown: {
@@ -168,11 +168,11 @@ const debatersData = {
         matches: []
     },
     'ADYY': {
-        country: 'Malaysia 🇲🇾',
+        country: 'MALAYSIA',
         age: 'UNKNOWN',
-        community: 'Community D',
+        community: 'DBA',
         status: 'ACTIVE',
-        division: 'High Tier',
+        division: 'HIGH TIER',
         imageUrl: 'images/adyy_profile.jpg',
         record: { W: 1, L: 1, D: 0 },
         breakdown: {
@@ -182,11 +182,11 @@ const debatersData = {
         matches: []
     },
     'RYUU': {
-        country: 'Malaysia 🇲🇾',
+        country: 'MALAYSIA',
         age: 'UNKNOWN',
-        community: 'Community E',
+        community: 'DBA',
         status: 'ACTIVE',
-        division: 'High Tier',
+        division: 'HIGH TIER',
         imageUrl: 'images/ryuu_profile.jpg',
         record: { W: 1, L: 1, D: 0 },
         breakdown: {
@@ -196,11 +196,11 @@ const debatersData = {
         matches: []
     },
     'MUCHIBEI': {
-        country: 'Malaysia 🇲🇾',
+        country: 'MALAYSIA',
         age: 'UNKNOWN',
-        community: 'Community D',
+        community: 'DBA',
         status: 'ACTIVE',
-        division: 'High Tier',
+        division: 'HIGH TIER',
         imageUrl: 'images/muchibei_profile.jpg',
         record: { W: 0, L: 1, D: 0 },
         breakdown: {
@@ -210,11 +210,11 @@ const debatersData = {
         matches: []
     },
     'RENJI': {
-        country: 'Malaysia 🇲🇾',
+        country: 'MALAYSIA',
         age: 'UNKNOWN',
-        community: 'Community D',
+        community: 'DBA',
         status: 'ACTIVE',
-        division: 'Mid Tier',
+        division: 'MID TIER',
         imageUrl: 'images/renji_profile.jpg',
         record: { W: 0, L: 1, D: 0 },
         breakdown: {
@@ -224,11 +224,11 @@ const debatersData = {
         matches: []
     },
     'RIM': {
-        country: 'Malaysia 🇲🇾',
+        country: 'MALAYSIA',
         age: 'UNKNOWN',
-        community: 'Community E',
+        community: 'DBA',
         status: 'ACTIVE',
-        division: 'Low Tier',
+        division: 'LOW TIER',
         imageUrl: 'images/rim_profile.jpg',
         record: { W: 0, L: 1, D: 0 },
         breakdown: {
@@ -238,11 +238,11 @@ const debatersData = {
         matches: []
     },
     'SHADE': {
-        country: 'Malaysia 🇲🇾',
+        country: 'MALAYSIA',
         age: 'UNKNOWN',
-        community: 'Community D',
+        community: 'DBA',
         status: 'ACTIVE',
-        division: 'High Tier',
+        division: 'HIGH TIER',
         imageUrl: 'images/shade_profile.jpg',
         record: { W: 1, L: 1, D: 0 },
         breakdown: {
@@ -252,11 +252,11 @@ const debatersData = {
         matches: []
     },
     'KYUKI': {
-        country: 'Malaysia 🇲🇾',
+        country: 'MALAYSIA',
         age: 'UNKNOWN',
-        community: 'Community F',
+        community: 'DBA',
         status: 'ACTIVE',
-        division: 'High Tier',
+        division: 'HIGH TIER',
         imageUrl: 'images/kyuki_profile.jpg',
         record: { W: 1, L: 0, D: 0 },
         breakdown: {
@@ -266,11 +266,11 @@ const debatersData = {
         matches: []
     },
     'KLEIN': {
-        country: 'Vietnam 🇻🇳',
+        country: 'VIETNAM',
         age: 'UNKNOWN',
-        community: 'Community G',
+        community: 'DBA',
         status: 'INACTIVE',
-        division: 'High Tier',
+        division: 'HIGH TIER',
         imageUrl: 'images/klein_profile.jpg',
         record: { W: 0, L: 0, D: 0 },
         breakdown: {
@@ -280,11 +280,11 @@ const debatersData = {
         matches: []
     },
     'KAZ': {
-        country: 'Philippines 🇵🇭',
+        country: 'PHILIPPINES',
         age: 'UNKNOWN',
-        community: 'Community H',
+        community: 'DBA',
         status: 'ACTIVE',
-        division: 'Mid Tier',
+        division: 'MID TIER',
         imageUrl: 'images/kaz_profile.jpg',
         record: { W: 0, L: 1, D: 0 },
         breakdown: {
@@ -294,11 +294,11 @@ const debatersData = {
         matches: []
     },
     'AARON': {
-        country: 'Mexico 🇲🇽',
+        country: 'MEXICO',
         age: 'UNKNOWN',
-        community: 'Community I',
+        community: 'DBA',
         status: 'ACTIVE',
-        division: 'High Tier',
+        division: 'HIGH TIER',
         imageUrl: 'images/aaron_profile.jpg',
         record: { W: 1, L: 0, D: 0 },
         breakdown: {
@@ -308,11 +308,11 @@ const debatersData = {
         matches: []
     },
     'XAVIER': {
-        country: 'Brazil 🇧🇷',
+        country: 'BRAZIL',
         age: 'UNKNOWN',
-        community: 'Community J',
+        community: 'DBA',
         status: 'INACTIVE',
-        division: 'Mid Tier',
+        division: 'MID TIER',
         imageUrl: 'images/xavier_profile.jpg',
         record: { W: 0, L: 0, D: 0 },
         breakdown: {
@@ -322,11 +322,11 @@ const debatersData = {
         matches: []
     },
     'MIKAEL': {
-        country: 'Brazil 🇧🇷',
+        country: 'BRAZIL',
         age: 'UNKNOWN',
-        community: 'Community K',
+        community: 'DBA',
         status: 'ACTIVE',
-        division: 'High Tier',
+        division: 'HIGH TIER',
         imageUrl: 'images/mikael_profile.jpg',
         record: { W: 0, L: 0, D: 0 },
         breakdown: {
@@ -336,11 +336,11 @@ const debatersData = {
         matches: []
     },
     'RABBITTO': {
-        country: 'Canada 🇨🇦',
+        country: 'CANADA',
         age: 'UNKNOWN',
-        community: 'Community L',
+        community: 'DBA',
         status: 'ACTIVE',
-        division: 'High Tier',
+        division: 'HIGH TIER',
         imageUrl: 'images/rabbito_profile.jpg',
         record: { W: 0, L: 0, D: 0 },
         breakdown: {
@@ -350,11 +350,11 @@ const debatersData = {
         matches: []
     },
     'HYRUKI': {
-        country: 'Italy 🇮🇹',
+        country: 'ITALY',
         age: 'UNKNOWN',
-        community: 'Community M',
+        community: 'DBA',
         status: 'ACTIVE',
-        division: 'High Tier',
+        division: 'HIGH TIER',
         imageUrl: 'images/hyruki_profile.jpg',
         record: { W: 0, L: 0, D: 0 },
         breakdown: {
@@ -364,11 +364,11 @@ const debatersData = {
         matches: []
     },
     'LARNEX': {
-        country: 'France 🇫🇷',
+        country: 'FRANCE',
         age: 'UNKNOWN',
-        community: 'Community N',
+        community: 'DBA',
         status: 'INACTIVE',
-        division: 'Mid Tier',
+        division: 'MID TIER',
         imageUrl: 'images/larnex_profile.jpg',
         record: { W: 0, L: 0, D: 0 },
         breakdown: {
@@ -378,11 +378,11 @@ const debatersData = {
         matches: []
     },
     'IULIAN': {
-        country: 'Romania 🇷🇴',
+        country: 'ROMANIA',
         age: 'UNKNOWN',
-        community: 'Community O',
+        community: 'DBA',
         status: 'ACTIVE',
-        division: 'Low Tier',
+        division: 'LOW TIER',
         imageUrl: 'images/iulian_profile.jpg',
         record: { W: 0, L: 0, D: 0 },
         breakdown: {
@@ -392,11 +392,11 @@ const debatersData = {
         matches: []
     },
     'HOMURA KIN': {
-        country: 'Russia 🇷🇺',
+        country: 'RUSSIA',
         age: 'UNKNOWN',
-        community: 'Community P',
+        community: 'DBA',
         status: 'ACTIVE',
-        division: 'Mid Tier',
+        division: 'MID TIER',
         imageUrl: 'images/homura_kin_profile.jpg',
         record: { W: 0, L: 0, D: 0 },
         breakdown: {
@@ -406,11 +406,11 @@ const debatersData = {
         matches: []
     },
     'YULZ CLOVER': {
-        country: 'Unknown ❓',
+        country: 'UNKNOWN',
         age: 'UNKNOWN',
-        community: 'Community Q',
+        community: 'DBA',
         status: 'ACTIVE',
-        division: 'Mid Tier',
+        division: 'MID TIER',
         imageUrl: 'images/yulz_clover_profile.jpg',
         record: { W: 1, L: 0, D: 0 },
         breakdown: {
@@ -420,11 +420,11 @@ const debatersData = {
         matches: []
     },
     'RAJU': {
-        country: 'Unknown ❓',
+        country: 'UNKNOWN',
         age: 'UNKNOWN',
-        community: 'Community R',
+        community: 'DBA',
         status: 'ACTIVE',
-        division: 'High Tier',
+        division: 'HIGH TIER',
         imageUrl: 'images/raju_profile.jpg',
         record: { W: 0, L: 1, D: 0 },
         breakdown: {
@@ -522,9 +522,9 @@ function calculateRanking() {
     const sortedRanking = Object.keys(ranking).sort((a, b) => ranking[b].points - ranking[a].points);
 
     const tieredRanking = {
-        'High Tier': [],
-        'Mid Tier': [],
-        'Low Tier': []
+        'HIGH TIER': [],
+        'MID TIER': [],
+        'LOW TIER': []
     };
 
     sortedRanking.forEach(name => {
@@ -579,28 +579,6 @@ function renderSpecificDebaterProfile() {
 
     const debater = debatersData[debaterName];
     const imageUrl = debater.imageUrl || 'images/placeholder_profile_wide.jpg';
-
-    // Menghilangkan bagian ini sepenuhnya
-    // let winsHtml = '';
-    // const winMethods = Object.keys(debater.breakdown.wins).filter(method => debater.breakdown.wins[method] > 0);
-    // winMethods.forEach(method => {
-    //     winsHtml += `
-    //         <div class="detail-item">
-    //             <span class="label">${method}</span>
-    //             <span class="count">${debater.breakdown.wins[method]}</span>
-    //         </div>
-    //     `;
-    // });
-    // let lossesHtml = '';
-    // const lossMethods = Object.keys(debater.breakdown.losses).filter(method => debater.breakdown.losses[method] > 0);
-    // lossMethods.forEach(method => {
-    //     lossesHtml += `
-    //         <div class="detail-item">
-    //             <span class="label">${method}</span>
-    //             <span class="count">${debater.breakdown.losses[method]}</span>
-    //         </div>
-    //     `;
-    // });
 
     const profileHTML = `
         <div class="single-profile-card">
@@ -672,7 +650,7 @@ function renderRanking() {
     if (!container) return;
 
     container.innerHTML = '';
-    const tiers = ['High Tier', 'Mid Tier', 'Low Tier'];
+    const tiers = ['HIGH TIER', 'MID TIER', 'LOW TIER'];
     tiers.forEach(tier => {
         const tierCard = document.createElement('div');
         tierCard.className = 'ranking-tier-card';
