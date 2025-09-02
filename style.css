@@ -436,9 +436,11 @@ h2.page-title {
     margin-top: 0;
 }
 
+/* ... kode sebelumnya ... */
+
 /* PERBAIKAN TAMPILAN REKOR WLD DI SINI */
 .profile-record {
-    background-color: var(--card-bg); /* Beri warna latar belakang */
+    background-color: var(--card-bg);
     padding: 1.5rem;
     border-radius: 5px;
 }
@@ -448,11 +450,12 @@ h2.page-title {
     font-weight: 900;
     text-transform: uppercase;
     margin-bottom: 1.5rem;
+    text-align: center; /* Menengahkan tulisan "BREAKDOWN" */
 }
 
 .record-summary {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Menengahkan kotak "Wins" dan "Losses" */
     gap: 1.5rem;
     margin-bottom: 1rem;
 }
@@ -483,7 +486,6 @@ h2.page-title {
 .loss-box {
     background-color: var(--loss-color);
 }
-
 .record-detail-grid {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Dua kolom untuk detail W/L */
