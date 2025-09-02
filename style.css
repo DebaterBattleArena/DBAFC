@@ -409,9 +409,8 @@ h2.page-title {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
-    margin-top: 3rem; 
+    margin-top: 1rem;
 }
-
 
 .profile-info-overlay .details div {
     text-align: left;
@@ -627,6 +626,7 @@ footer p {
     margin: 0 0.5rem;
 }
 
+/* Perubahan untuk tampilan mobile (max-width: 768px) */
 @media (max-width: 768px) {
     .header-right {
         gap: 0.5rem;
@@ -635,42 +635,33 @@ footer p {
         font-size: 2rem;
     }
     .profile-info-overlay .details {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
         gap: 0.5rem;
-    }
-    .profile-info-overlay .details p {
-        font-size: 0.9rem;
-    }
-}
-@media (max-width: 768px) {
-    .header-right {
-        gap: 0.5rem;
-    }
-    .profile-info-overlay h3 {
-        font-size: 2rem;
-    }
-    .profile-info-overlay .details {
-        flex-direction: row; /* Mengatur item berjejer ke samping */
-        justify-content: space-between; /* Memberi jarak merata di antara item */
-        gap: 0.5rem; /* Memberi sedikit jarak antar item */
         margin-top: 1rem;
-        flex-wrap: nowrap; /* Mencegah item melompat ke baris baru */
+        flex-wrap: nowrap;
     }
 
     .profile-info-overlay .details div {
-        flex-grow: 1; /* Membuat setiap item tumbuh merata */
-        text-align: center; /* Mengatur teks di tengah */
-        min-width: 0; /* Memungkinkan item menyusut jika perlu */
+        flex-grow: 1;
+        text-align: center;
+        min-width: 0;
     }
 
     .profile-info-overlay .details h4 {
         font-size: 0.7rem;
-        white-space: nowrap; /* Mencegah teks judul melompat baris */
-        overflow: hidden; /* Menyembunyikan teks yang meluber */
-        text-overflow: ellipsis; /* Menambahkan "..." jika teks terlalu panjang */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     
     .profile-info-overlay .details p {
         font-size: 0.8rem;
+    }
+
+    /* Menengahkan tulisan BREAKDOWN di mobile */
+    .match-history-section h4,
+    .profile-record h4 {
+        text-align: center;
     }
 }
