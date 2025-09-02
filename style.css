@@ -409,7 +409,7 @@ h2.page-title {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
-    margin-top: 1rem;
+    margin-top: 5rem; /* Tambahkan jarak dari atas */
 }
 
 .profile-info-overlay .details div {
