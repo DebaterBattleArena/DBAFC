@@ -445,7 +445,16 @@ function renderSpecificDebaterProfile() {
             </div>
             <div class="profile-content">
                 <div class="profile-record">
-                    <h4>WINS - ${debater.record.W} | LOSSES - ${debater.record.L} | DRAWS - ${debater.record.D}</h4>
+                    <h4>BREAKDOWN</h4>
+                    <div class="record-breakdown">
+                        <div class="record-box win-box">
+                            WINS - ${debater.record.W}
+                        </div>
+                        <div class="record-box loss-box">
+                            LOSSES - ${debater.record.L}
+                        </div>
+                        ${debater.record.D > 0 ? `<div class="record-box draw-box">DRAWS - ${debater.record.D}</div>` : ''}
+                    </div>
                 </div>
                 <div class="match-history-section">
                     <h4>MATCH HISTORY</h4>
