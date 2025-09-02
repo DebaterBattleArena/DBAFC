@@ -5,6 +5,7 @@ const debatersData = {
         community: 'DBA Official',
         status: 'ACTIVE',
         division: 'Mid Tier',
+        imageUrl: 'images/hiroo_profile.jpg', // Tambahkan path gambar di sini
         matches: []
     },
     'RANZT': {
@@ -13,6 +14,7 @@ const debatersData = {
         community: 'DBA Official',
         status: 'ACTIVE',
         division: 'Mid Tier',
+        imageUrl: 'images/ranzt_profile.jpg', // Tambahkan path gambar di sini
         matches: []
     },
     'ZOGRATIS': {
@@ -21,6 +23,7 @@ const debatersData = {
         community: 'Community A',
         status: 'ACTIVE',
         division: 'High Tier',
+        imageUrl: 'images/zogratis_profile.jpg',
         matches: []
     },
     'PRATAMA': {
@@ -29,6 +32,7 @@ const debatersData = {
         community: 'Community B',
         status: 'ACTIVE',
         division: 'High Tier',
+        imageUrl: 'images/pratama_profile.jpg',
         matches: []
     },
     'AHENG': {
@@ -37,6 +41,7 @@ const debatersData = {
         community: 'Community A',
         status: 'ACTIVE',
         division: 'High Tier',
+        imageUrl: 'images/aheng_profile.jpg',
         matches: []
     },
     'ARYANWT': {
@@ -45,6 +50,7 @@ const debatersData = {
         community: 'DBA Official',
         status: 'ACTIVE',
         division: 'High Tier',
+        imageUrl: 'images/aryanwt_profile.jpg',
         matches: []
     },
     'THINZEL': {
@@ -53,6 +59,7 @@ const debatersData = {
         community: 'Community C',
         status: 'ACTIVE',
         division: 'Low Tier',
+        imageUrl: 'images/thinzel_profile.jpg',
         matches: []
     },
     'LIANX': {
@@ -61,6 +68,7 @@ const debatersData = {
         community: 'DBA Official',
         status: 'ACTIVE',
         division: 'High Tier',
+        imageUrl: 'images/lianx_profile.jpg',
         matches: []
     },
     'VALEN': {
@@ -69,6 +77,7 @@ const debatersData = {
         community: 'Community A',
         status: 'ACTIVE',
         division: 'Mid Tier',
+        imageUrl: 'images/valen_profile.jpg',
         matches: []
     },
     'KUREJI': {
@@ -77,6 +86,7 @@ const debatersData = {
         community: 'Community B',
         status: 'ACTIVE',
         division: 'Low Tier',
+        imageUrl: 'images/kureji_profile.jpg',
         matches: []
     },
     'KARIZ': {
@@ -85,6 +95,7 @@ const debatersData = {
         community: 'Community A',
         status: 'ACTIVE',
         division: 'High Tier',
+        imageUrl: 'images/kariz_profile.jpg',
         matches: []
     },
     'FARRAS': {
@@ -93,6 +104,7 @@ const debatersData = {
         community: 'Community B',
         status: 'ACTIVE',
         division: 'Low Tier',
+        imageUrl: 'images/farras_profile.jpg',
         matches: []
     },
     'ADYY': {
@@ -101,6 +113,7 @@ const debatersData = {
         community: 'Community D',
         status: 'ACTIVE',
         division: 'High Tier',
+        imageUrl: 'images/adyy_profile.jpg',
         matches: []
     },
     'RYUU': {
@@ -109,6 +122,7 @@ const debatersData = {
         community: 'Community E',
         status: 'ACTIVE',
         division: 'High Tier',
+        imageUrl: 'images/ryuu_profile.jpg',
         matches: []
     },
     'MUCHIBEI': {
@@ -117,6 +131,7 @@ const debatersData = {
         community: 'Community D',
         status: 'ACTIVE',
         division: 'High Tier',
+        imageUrl: 'images/muchibei_profile.jpg',
         matches: []
     },
     'RENJI': {
@@ -125,6 +140,7 @@ const debatersData = {
         community: 'Community D',
         status: 'ACTIVE',
         division: 'Mid Tier',
+        imageUrl: 'images/renji_profile.jpg',
         matches: []
     },
     'RIM': {
@@ -133,6 +149,7 @@ const debatersData = {
         community: 'Community E',
         status: 'ACTIVE',
         division: 'Low Tier',
+        imageUrl: 'images/rim_profile.jpg',
         matches: []
     },
     'SHADE': {
@@ -141,6 +158,7 @@ const debatersData = {
         community: 'Community D',
         status: 'ACTIVE',
         division: 'High Tier',
+        imageUrl: 'images/shade_profile.jpg',
         matches: []
     },
     'KYUKI': {
@@ -149,6 +167,7 @@ const debatersData = {
         community: 'Community F',
         status: 'ACTIVE',
         division: 'High Tier',
+        imageUrl: 'images/kyuki_profile.jpg',
         matches: []
     },
     'KLEIN': {
@@ -157,6 +176,7 @@ const debatersData = {
         community: 'Community G',
         status: 'INACTIVE',
         division: 'High Tier',
+        imageUrl: 'images/klein_profile.jpg',
         matches: []
     },
     'KAZ': {
@@ -165,6 +185,7 @@ const debatersData = {
         community: 'Community H',
         status: 'ACTIVE',
         division: 'Mid Tier',
+        imageUrl: 'images/kaz_profile.jpg',
         matches: []
     },
     'AARON': {
@@ -173,6 +194,7 @@ const debatersData = {
         community: 'Community I',
         status: 'ACTIVE',
         division: 'High Tier',
+        imageUrl: 'images/aaron_profile.jpg',
         matches: []
     },
     'XAVIER': {
@@ -181,6 +203,7 @@ const debatersData = {
         community: 'Community J',
         status: 'INACTIVE',
         division: 'Mid Tier',
+        imageUrl: 'images/xavier_profile.jpg',
         matches: []
     },
     'MIKAEL': {
@@ -189,6 +212,7 @@ const debatersData = {
         community: 'Community K',
         status: 'ACTIVE',
         division: 'High Tier',
+        imageUrl: 'images/mikael_profile.jpg',
         matches: []
     },
     'RABBITTO': {
@@ -197,6 +221,7 @@ const debatersData = {
         community: 'Community L',
         status: 'ACTIVE',
         division: 'High Tier',
+        imageUrl: 'images/rabbito_profile.jpg',
         matches: []
     },
     'HYRUKI': {
@@ -205,6 +230,7 @@ const debatersData = {
         community: 'Community M',
         status: 'ACTIVE',
         division: 'High Tier',
+        imageUrl: 'images/hyruki_profile.jpg',
         matches: []
     },
     'LARNEX': {
@@ -213,6 +239,7 @@ const debatersData = {
         community: 'Community N',
         status: 'INACTIVE',
         division: 'Mid Tier',
+        imageUrl: 'images/larnex_profile.jpg',
         matches: []
     },
     'IULIAN': {
@@ -221,6 +248,7 @@ const debatersData = {
         community: 'Community O',
         status: 'ACTIVE',
         division: 'Low Tier',
+        imageUrl: 'images/iulian_profile.jpg',
         matches: []
     },
     'HOMURA KIN': {
@@ -229,6 +257,7 @@ const debatersData = {
         community: 'Community P',
         status: 'ACTIVE',
         division: 'Mid Tier',
+        imageUrl: 'images/homura_kin_profile.jpg',
         matches: []
     },
     'YULZ CLOVER': {
@@ -237,6 +266,7 @@ const debatersData = {
         community: 'Community Q',
         status: 'ACTIVE',
         division: 'Mid Tier',
+        imageUrl: 'images/yulz_clover_profile.jpg',
         matches: []
     },
     'RAJU': {
@@ -245,6 +275,7 @@ const debatersData = {
         community: 'Community R',
         status: 'ACTIVE',
         division: 'High Tier',
+        imageUrl: 'images/raju_profile.jpg',
         matches: []
     }
 };
@@ -360,8 +391,11 @@ function renderDebaterProfiles() {
         card.className = 'debater-card';
         card.href = `profile.html?name=${encodeURIComponent(name)}`;
 
+        // Menggunakan imageUrl dari data, atau placeholder jika tidak ada
+        const imageUrl = debater.imageUrl || 'images/placeholder_profile.jpg';
+
         card.innerHTML = `
-            <img src="images/placeholder_profile.jpg" alt="${name}">
+            <img src="${imageUrl}" alt="${name}">
             <h3>${name}</h3>
             <p>${debater.country}</p>
         `;
@@ -380,50 +414,58 @@ function renderSpecificDebaterProfile() {
     }
 
     const debater = debatersData[debaterName];
+    // Menggunakan imageUrl dari data, atau placeholder jika tidak ada
+    const imageUrl = debater.imageUrl || 'images/placeholder_profile_wide.jpg'; // Placeholder untuk gambar lebar
+
     const profileHTML = `
-        <section class="single-profile-card">
-            <div class="profile-header">
-                <img src="images/placeholder_profile.jpg" alt="${debaterName}">
-                <div class="profile-info">
+        <div class="single-profile-card">
+            <div class="profile-hero">
+                <img src="${imageUrl}" alt="${debaterName}">
+                <div class="profile-info-overlay">
                     <h3>${debaterName}</h3>
-                    <p>${debater.community}</p>
+                    <div class="details">
+                        <div>
+                            <h4>DIVISION</h4>
+                            <p>${debater.division}</p>
+                        </div>
+                        <div>
+                            <h4>COUNTRY</h4>
+                            <p>${debater.country}</p>
+                        </div>
+                        <div>
+                            <h4>AGE</h4>
+                            <p>${debater.age}</p>
+                        </div>
+                        <div>
+                            <h4>COMMUNITY</h4>
+                            <p>${debater.community}</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="profile-details">
-                <div class="detail-box">
-                    <h4>DIVISION</h4>
-                    <p>${debater.division.toUpperCase()}</p>
+            <div class="profile-content">
+                <div class="profile-record">
+                    <h4>WINS - ${debater.record.W} | LOSSES - ${debater.record.L} | DRAWS - ${debater.record.D}</h4>
                 </div>
-                <div class="detail-box">
-                    <h4>COUNTRY</h4>
-                    <p>${debater.country.toUpperCase()}</p>
-                </div>
-                <div class="detail-box">
-                    <h4>AGE</h4>
-                    <p>${debater.age.toUpperCase()}</p>
-                </div>
-            </div>
-            <div class="profile-record">
-                <h4>WINS - ${debater.record.W} | LOSSES - ${debater.record.L} | DRAWS - ${debater.record.D}</h4>
-            </div>
-            <div class="match-history-section">
-                <h4>MATCH HISTORY</h4>
-                <div class="match-list">
-                    ${debater.matches.length > 0 ?
-                        debater.matches.map(match => `
-                            <div class="match-row">
-                                <span class="result-text ${match.outcome.toLowerCase()}">${match.outcome.toUpperCase()}</span>
-                                <div class="opponent-event">
-                                    <p class="debater-name">${match.opponent}</p>
-                                    <p class="event-details-text">${match.event}</p>
+                <div class="match-history-section">
+                    <h4>MATCH HISTORY</h4>
+                    <div class="match-list">
+                        ${debater.matches.length > 0 ?
+                            debater.matches.map(match => `
+                                <div class="match-row">
+                                    <span class="result-text ${match.outcome.toLowerCase()}">${match.outcome.toUpperCase()}</span>
+                                    <div class="opponent-event">
+                                        <p class="debater-name">${match.opponent}</p>
+                                        <p class="event-details-text">${match.event}</p>
+                                    </div>
                                 </div>
-                            </div>
-                        `).join('')
-                        : '<p>Belum ada riwayat pertandingan.</p>'
-                    }
+                            `).join('')
+                            : '<p>Belum ada riwayat pertandingan.</p>'
+                        }
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
     `;
 
     container.innerHTML = profileHTML;
@@ -445,8 +487,9 @@ function renderRanking() {
 
         ranking[tier].forEach(debater => {
             const li = document.createElement('li');
+            const imageUrl = debatersData[debater.name].imageUrl || 'images/placeholder_profile.jpg';
             li.innerHTML = `
-                <img src="images/placeholder_profile.jpg" alt="${debater.name}">
+                <img src="${imageUrl}" alt="${debater.name}">
                 <div class="ranking-info">
                     <span class="ranking-name">${debater.name}</span>
                     <span class="ranking-country">${debater.country}</span>
