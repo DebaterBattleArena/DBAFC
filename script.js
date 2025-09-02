@@ -5,7 +5,7 @@ const debatersData = {
         community: 'DBA Official',
         status: 'ACTIVE',
         division: 'Mid Tier',
-        imageUrl: 'images/hiroo_profile.jpg',
+        imageUrl: 'images/Nama Proyek 71.png',
         record: { W: 2, L: 0, D: 0 },
         breakdown: {
             wins: { KO: 1, UD: 1, SD: 0 },
