@@ -5,7 +5,7 @@ const debatersData = {
         community: 'DBA',
         status: 'ACTIVE',
         division: 'MID TIER',
-        imageUrl: 'images/Nama Proyek 71.png',
+        imageUrl: 'images/Hiroo.JPEG.png',
         record: { W: 2, L: 0, D: 0 },
         breakdown: {
             wins: { KO: 1, UD: 1, SD: 0 },
@@ -159,7 +159,7 @@ const debatersData = {
         community: 'DBA',
         status: 'ACTIVE',
         division: 'HIGH TIER',
-        imageUrl: 'images/farras_profile.jpg',
+        imageUrl: 'images/farras_profile.jpg.png',
         record: { W: 0, L: 0, D: 0 },
         breakdown: {
             wins: { KO: 0, UD: 0, SD: 0 },
