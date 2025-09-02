@@ -299,7 +299,7 @@ const debatersData = {
         community: 'DBA',
         status: 'ACTIVE',
         division: 'HIGH TIER',
-        imageUrl: 'images/aaron_profile.jpg',
+        imageUrl: 'images/Aaron.png',
         record: { W: 1, L: 0, D: 0 },
         breakdown: {
             wins: { KO: 0, UD: 1, SD: 0 },
