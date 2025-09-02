@@ -68,8 +68,10 @@ header {
     width: 100%;
     padding: 1rem 0;
     display: flex;
-    gap: 0.5rem;
     align-items: center;
+    background-color: var(--border-color);
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 .search-container.hidden {
@@ -77,14 +79,18 @@ header {
 }
 
 #searchInput {
-    width: 100%;
+    flex-grow: 1;
     padding: 0.75rem;
-    background-color: var(--border-color);
-    border: 1px solid var(--border-color);
-    border-radius: 5px;
+    background-color: transparent;
+    border: none;
     color: var(--text-primary);
     font-size: 1rem;
     text-transform: uppercase;
+    outline: none;
+}
+
+#searchInput::placeholder {
+    color: var(--text-secondary);
 }
 
 #searchButton {
@@ -94,6 +100,7 @@ header {
     color: var(--dark-bg);
     cursor: pointer;
     font-weight: 700;
+    height: 100%;
 }
 
 .main-nav {
@@ -195,7 +202,6 @@ h2.page-title {
     color: var(--dark-bg);
 }
 
-/* Related Videos (Ongoing Matches) */
 .related-videos {
     margin-top: 3rem;
 }
@@ -264,7 +270,6 @@ h2.page-title {
     margin-top: 1.5rem;
 }
 
-/* Archive Page */
 .event-results-section {
     margin-top: 2rem;
 }
@@ -317,7 +322,7 @@ h2.page-title {
     color: var(--text-secondary);
 }
 
-/* Profile Page */
+/* Profile Page - List of Debaters */
 .profile-main-section {
     padding-top: 2rem;
 }
@@ -357,61 +362,79 @@ h2.page-title {
 
 /* Specific Debater Profile */
 .single-profile-card {
-    background-color: var(--card-bg);
-    padding: 2rem;
+    background-color: var(--dark-bg); /* Menggunakan dark-bg untuk section utama */
+    padding: 0; /* Menghilangkan padding agar gambar bisa penuh */
+    margin: -2rem -5% 0 -5%; /* Mengisi lebar halaman untuk tampilan hero */
 }
 
-.profile-header {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
+.profile-hero {
+    position: relative;
+    width: 100%;
+    /* Membuat rasio 16:9 */
+    padding-bottom: 56.25%; /* 9 / 16 * 100% */
+    background-color: #000; /* Warna latar belakang jika gambar tidak penuh */
+    overflow: hidden; /* Memastikan gambar tidak keluar dari container */
 }
 
-.profile-header img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid var(--accent-yellow);
+.profile-hero img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Memastikan gambar mengisi area tanpa terdistorsi */
+    border-radius: 0; /* Menghilangkan border-radius */
+    border: none; /* Menghilangkan border */
 }
 
-.profile-info h3 {
-    font-size: 2.5rem;
+.profile-info-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 5%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0)); /* Gradient hitam transparan */
+    color: var(--text-primary);
+    text-align: left;
+}
+
+.profile-info-overlay h3 {
+    font-size: 2.8rem; /* Lebih besar dari sebelumnya */
     font-weight: 900;
     text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    line-height: 1.1;
 }
 
-.profile-info p {
-    font-size: 1.1rem;
-    color: var(--text-secondary);
-}
-
-.profile-details {
+.profile-info-overlay .details {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 2rem;
+    flex-wrap: wrap; /* Untuk responsif jika banyak detail */
     gap: 1.5rem;
+    margin-top: 1rem;
 }
 
-.detail-box {
-    background-color: var(--border-color);
-    padding: 1rem;
-    text-align: center;
-    flex: 1;
+.profile-info-overlay .details div {
+    text-align: left;
 }
 
-.detail-box h4 {
-    font-size: 1rem;
+.profile-info-overlay .details h4 {
+    font-size: 0.8rem;
     font-weight: 900;
+    text-transform: uppercase;
     color: var(--text-secondary);
 }
 
-.detail-box p {
-    font-size: 1.5rem;
-    font-weight: 900;
-    color: var(--accent-yellow);
-    margin-top: 0.5rem;
+.profile-info-overlay .details p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-primary);
+}
+
+
+.profile-content {
+    background-color: var(--card-bg);
+    padding: 2rem 5%; /* Padding kembali normal */
+    margin-top: 0; /* Hapus margin top yang sebelumnya ada */
 }
 
 .profile-record {
@@ -556,8 +579,14 @@ footer p {
     .header-right {
         gap: 0.5rem;
     }
-    .profile-header {
+    .profile-info-overlay h3 {
+        font-size: 2rem;
+    }
+    .profile-info-overlay .details {
         flex-direction: column;
-        text-align: center;
+        gap: 0.5rem;
+    }
+    .profile-info-overlay .details p {
+        font-size: 0.9rem;
     }
 }
