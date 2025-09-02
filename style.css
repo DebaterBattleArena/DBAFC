@@ -386,6 +386,7 @@ h2.page-title {
     border: none;
 }
 
+/* --- PERBAIKAN TATA LETAK DETAIL PROFIL DI SINI --- */
 .profile-info-overlay {
     position: absolute;
     bottom: 0;
@@ -428,6 +429,7 @@ h2.page-title {
     font-weight: 400;
     color: var(--text-primary);
 }
+/* --- AKHIR PERBAIKAN TATA LETAK DETAIL PROFIL --- */
 
 
 .profile-content {
@@ -436,8 +438,8 @@ h2.page-title {
     margin-top: 0;
 }
 
+/* --- PERBAIKAN TATA LETAK BREAKDOWN DI SINI --- */
 .profile-record {
-    background-color: transparent;
     padding: 0;
     margin-top: 2rem;
 }
@@ -447,49 +449,29 @@ h2.page-title {
     font-weight: 900;
     text-transform: uppercase;
     margin-bottom: 1rem;
-    padding-left: 5%;
-}
-
-.record-summary {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    font-size: 1.2rem;
-    background-color: var(--card-bg);
-    padding: 1rem;
-    border-radius: 5px;
-    text-align: center;
-}
-
-.record-summary .wins,
-.record-summary .losses,
-.record-summary .draws {
-    flex-grow: 1;
-    text-align: center;
-}
-
-.record-summary span {
-    color: var(--text-primary);
-}
-
-.record-summary .divider {
-    color: var(--text-secondary);
-    margin: 0 1rem;
 }
 
 .record-breakdown {
     display: flex;
     justify-content: space-between;
     gap: 1.5rem;
-    margin-top: 1.5rem;
-    background-color: var(--card-bg);
-    padding: 1.5rem;
-    border-radius: 5px;
+    margin-top: 1rem;
 }
 
 .record-breakdown .column {
     flex: 1;
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 5px;
+    color: var(--text-primary);
+}
+
+.record-breakdown .column.win-detail {
+    background-color: var(--win-color);
+}
+
+.record-breakdown .column.loss-detail {
+    background-color: var(--loss-color);
 }
 
 .record-breakdown h5 {
@@ -510,15 +492,7 @@ h2.page-title {
 .record-breakdown .method-item .count {
     font-weight: bold;
 }
-
-.win-detail h5 {
-    color: var(--win-color);
-}
-
-.loss-detail h5 {
-    color: var(--loss-color);
-}
-
+/* --- AKHIR PERBAIKAN TATA LETAK BREAKDOWN --- */
 
 .match-history-section {
     margin-top: 3rem;
