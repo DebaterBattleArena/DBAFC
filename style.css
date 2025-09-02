@@ -436,53 +436,89 @@ h2.page-title {
     margin-top: 0;
 }
 
-/* Perubahan di sini untuk tampilan rekor WLD */
+/* PERBAIKAN TAMPILAN REKOR WLD DI SINI */
 .profile-record {
-    background-color: transparent; /* Hilangkan background abu-abu utama */
-    padding: 0; /* Hilangkan padding utama */
-    margin-top: 2rem;
-    text-align: center;
+    background-color: var(--card-bg); /* Beri warna latar belakang */
+    padding: 1.5rem;
+    border-radius: 5px;
 }
 
 .profile-record h4 {
     font-size: 1.5rem;
     font-weight: 900;
     text-transform: uppercase;
-    margin-bottom: 1.5rem; /* Tambah jarak ke blok W/L */
-    text-align: left; /* Posisikan judul ke kiri */
-    padding-left: 5%; /* Sesuaikan dengan padding main content */
+    margin-bottom: 1.5rem;
 }
 
-.record-breakdown {
+.record-summary {
     display: flex;
-    justify-content: center; /* Pusatkan jika tidak memenuhi lebar */
-    gap: 0; /* Hilangkan gap antar box */
-    margin-top: 0;
-    width: 100%; /* Pastikan mengisi lebar */
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .record-box {
-    flex: 1; /* Agar setiap box mengambil ruang yang sama */
-    padding: 1.5rem 1rem;
     text-align: center;
-    color: var(--text-primary);
     font-weight: 900;
-    font-size: 1.8rem; /* Ukuran font lebih besar */
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    min-width: 120px;
+}
+
+.record-box .count {
+    font-size: 1.5rem;
+    display: block;
+}
+
+.record-box .label {
+    font-size: 0.8rem;
     text-transform: uppercase;
+    color: var(--dark-bg);
 }
 
 .win-box {
     background-color: var(--win-color);
-    border-top-left-radius: 5px; /* Radius untuk sudut kiri atas */
-    border-bottom-left-radius: 5px; /* Radius untuk sudut kiri bawah */
 }
 
 .loss-box {
     background-color: var(--loss-color);
-    border-top-right-radius: 5px; /* Radius untuk sudut kanan atas */
-    border-bottom-right-radius: 5px; /* Radius untuk sudut kanan bawah */
 }
-/* Akhir perubahan rekor WLD */
+
+.record-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dua kolom untuk detail W/L */
+    gap: 1.5rem;
+}
+
+.detail-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.detail-column h5 {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.detail-item .label {
+    color: var(--text-primary);
+}
+
+.detail-item .count {
+    font-weight: bold;
+    color: var(--text-primary);
+}
+/* AKHIR PERBAIKAN TAMPILAN WLD */
 
 .match-history-section {
     margin-top: 3rem;
@@ -603,14 +639,5 @@ footer p {
     }
     .profile-info-overlay .details p {
         font-size: 0.9rem;
-    }
-    .record-breakdown {
-        flex-direction: column; /* Ubah menjadi kolom di layar kecil */
-        align-items: center;
-        gap: 1rem;
-    }
-    .record-box {
-        width: 80%; /* Beri lebar tetap untuk box di mobile */
-        border-radius: 5px !important; /* Pastikan radius diterapkan penuh */
     }
 }
