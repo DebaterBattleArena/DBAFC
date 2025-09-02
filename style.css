@@ -431,7 +431,6 @@ h2.page-title {
 }
 /* --- AKHIR PERBAIKAN TATA LETAK DETAIL PROFIL --- */
 
-
 .profile-content {
     background-color: var(--card-bg);
     padding: 2rem 5%;
@@ -456,6 +455,7 @@ h2.page-title {
     justify-content: space-between;
     gap: 1.5rem;
     margin-top: 1rem;
+    flex-wrap: wrap; /* Memastikan kolom bisa ke bawah jika layar kecil */
 }
 
 .record-breakdown .column {
@@ -472,6 +472,10 @@ h2.page-title {
 
 .record-breakdown .column.loss-detail {
     background-color: var(--loss-color);
+}
+
+.record-breakdown .column.draw-detail {
+    background-color: var(--accent-yellow);
 }
 
 .record-breakdown h5 {
