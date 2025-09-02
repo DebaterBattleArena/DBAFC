@@ -5,8 +5,8 @@
     --text-secondary: #999999;
     --accent-yellow: #f8c105;
     --border-color: #333333;
-    --win-color: #4CAF50;
-    --loss-color: #F44336;
+    --win-color: #4CAF50; /* Hijau untuk Win */
+    --loss-color: #F44336; /* Merah untuk Loss */
 }
 
 * {
@@ -362,18 +362,17 @@ h2.page-title {
 
 /* Specific Debater Profile */
 .single-profile-card {
-    background-color: var(--dark-bg); /* Menggunakan dark-bg untuk section utama */
-    padding: 0; /* Menghilangkan padding agar gambar bisa penuh */
-    margin: -2rem -5% 0 -5%; /* Mengisi lebar halaman untuk tampilan hero */
+    background-color: var(--dark-bg);
+    padding: 0;
+    margin: -2rem -5% 0 -5%;
 }
 
 .profile-hero {
     position: relative;
     width: 100%;
-    /* Membuat rasio 16:9 */
-    padding-bottom: 56.25%; /* 9 / 16 * 100% */
-    background-color: #000; /* Warna latar belakang jika gambar tidak penuh */
-    overflow: hidden; /* Memastikan gambar tidak keluar dari container */
+    padding-bottom: 56.25%;
+    background-color: #000;
+    overflow: hidden;
 }
 
 .profile-hero img {
@@ -382,9 +381,9 @@ h2.page-title {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Memastikan gambar mengisi area tanpa terdistorsi */
-    border-radius: 0; /* Menghilangkan border-radius */
-    border: none; /* Menghilangkan border */
+    object-fit: cover;
+    border-radius: 0;
+    border: none;
 }
 
 .profile-info-overlay {
@@ -393,13 +392,13 @@ h2.page-title {
     left: 0;
     width: 100%;
     padding: 1.5rem 5%;
-    background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0)); /* Gradient hitam transparan */
+    background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
     color: var(--text-primary);
     text-align: left;
 }
 
 .profile-info-overlay h3 {
-    font-size: 2.8rem; /* Lebih besar dari sebelumnya */
+    font-size: 2.8rem;
     font-weight: 900;
     text-transform: uppercase;
     margin-bottom: 0.5rem;
@@ -408,7 +407,7 @@ h2.page-title {
 
 .profile-info-overlay .details {
     display: flex;
-    flex-wrap: wrap; /* Untuk responsif jika banyak detail */
+    flex-wrap: wrap;
     gap: 1.5rem;
     margin-top: 1rem;
 }
@@ -433,13 +432,14 @@ h2.page-title {
 
 .profile-content {
     background-color: var(--card-bg);
-    padding: 2rem 5%; /* Padding kembali normal */
-    margin-top: 0; /* Hapus margin top yang sebelumnya ada */
+    padding: 2rem 5%;
+    margin-top: 0;
 }
 
+/* Perubahan di sini untuk tampilan rekor WLD */
 .profile-record {
-    background-color: var(--border-color);
-    padding: 1.5rem;
+    background-color: transparent; /* Hilangkan background abu-abu utama */
+    padding: 0; /* Hilangkan padding utama */
     margin-top: 2rem;
     text-align: center;
 }
@@ -447,27 +447,42 @@ h2.page-title {
 .profile-record h4 {
     font-size: 1.5rem;
     font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem; /* Tambah jarak ke blok W/L */
+    text-align: left; /* Posisikan judul ke kiri */
+    padding-left: 5%; /* Sesuaikan dengan padding main content */
 }
 
 .record-breakdown {
     display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 1rem;
+    justify-content: center; /* Pusatkan jika tidak memenuhi lebar */
+    gap: 0; /* Hilangkan gap antar box */
+    margin-top: 0;
+    width: 100%; /* Pastikan mengisi lebar */
 }
 
-.record-breakdown .wins {
-    color: var(--win-color);
-}
-
-.record-breakdown .losses {
-    color: var(--loss-color);
-}
-
-.record-breakdown p {
-    font-size: 2rem;
+.record-box {
+    flex: 1; /* Agar setiap box mengambil ruang yang sama */
+    padding: 1.5rem 1rem;
+    text-align: center;
+    color: var(--text-primary);
     font-weight: 900;
+    font-size: 1.8rem; /* Ukuran font lebih besar */
+    text-transform: uppercase;
 }
+
+.win-box {
+    background-color: var(--win-color);
+    border-top-left-radius: 5px; /* Radius untuk sudut kiri atas */
+    border-bottom-left-radius: 5px; /* Radius untuk sudut kiri bawah */
+}
+
+.loss-box {
+    background-color: var(--loss-color);
+    border-top-right-radius: 5px; /* Radius untuk sudut kanan atas */
+    border-bottom-right-radius: 5px; /* Radius untuk sudut kanan bawah */
+}
+/* Akhir perubahan rekor WLD */
 
 .match-history-section {
     margin-top: 3rem;
@@ -588,5 +603,14 @@ footer p {
     }
     .profile-info-overlay .details p {
         font-size: 0.9rem;
+    }
+    .record-breakdown {
+        flex-direction: column; /* Ubah menjadi kolom di layar kecil */
+        align-items: center;
+        gap: 1rem;
+    }
+    .record-box {
+        width: 80%; /* Beri lebar tetap untuk box di mobile */
+        border-radius: 5px !important; /* Pastikan radius diterapkan penuh */
     }
 }
