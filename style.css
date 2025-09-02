@@ -450,12 +450,12 @@ h2.page-title {
     font-weight: 900;
     text-transform: uppercase;
     margin-bottom: 1.5rem;
-    text-align: center; /* Menengahkan tulisan "BREAKDOWN" */
+    text-align: center;
 }
 
 .record-summary {
     display: flex;
-    justify-content: center; /* Menengahkan kotak "Wins" dan "Losses" */
+    justify-content: center;
     gap: 1.5rem;
     margin-bottom: 1rem;
 }
@@ -486,9 +486,11 @@ h2.page-title {
 .loss-box {
     background-color: var(--loss-color);
 }
+
 .record-detail-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Dua kolom untuk detail W/L */
+    display: flex; /* Mengubah display ke flex */
+    justify-content: center; /* Menengahkan konten di dalamnya */
+    grid-template-columns: 1fr 1fr; /* Properti ini tidak lagi diperlukan, bisa dihapus */
     gap: 1.5rem;
 }
 
@@ -496,6 +498,7 @@ h2.page-title {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    text-align: center; /* Menengahkan teks di dalam kolom */
 }
 
 .detail-column h5 {
@@ -507,7 +510,7 @@ h2.page-title {
 
 .detail-item {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Menengahkan item individu */
     align-items: center;
     font-size: 0.9rem;
 }
@@ -521,6 +524,7 @@ h2.page-title {
     color: var(--text-primary);
 }
 /* AKHIR PERBAIKAN TAMPILAN WLD */
+
 
 .match-history-section {
     margin-top: 3rem;
