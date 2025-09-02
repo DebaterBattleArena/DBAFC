@@ -387,27 +387,31 @@ h2.page-title {
 }
 
 .profile-details {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-top: 2rem;
+    gap: 1.5rem;
 }
 
 .detail-box {
     background-color: var(--border-color);
     padding: 1rem;
     text-align: center;
+    flex: 1;
 }
 
 .detail-box h4 {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 900;
-    color: var(--accent-yellow);
+    color: var(--text-secondary);
 }
 
 .detail-box p {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--accent-yellow);
+    margin-top: 0.5rem;
 }
 
 .profile-record {
