@@ -484,7 +484,7 @@ function populateDebaterData() {
                 opponent: match.debater2,
                 outcome: match.debater1 === match.winner ? 'Win' : 'Loss',
                 event: match.event,
-                method: match.method // Tambahkan method ke match history
+                method: match.method
             });
         }
         if (debatersData[match.debater2]) {
@@ -492,7 +492,7 @@ function populateDebaterData() {
                 opponent: match.debater1,
                 outcome: match.debater2 === match.winner ? 'Win' : 'Loss',
                 event: match.event,
-                method: match.method // Tambahkan method ke match history
+                method: match.method
             });
         }
     });
@@ -556,7 +556,6 @@ function renderDebaterProfiles() {
         card.className = 'debater-card';
         card.href = `profile.html?name=${encodeURIComponent(name)}`;
 
-        // Menggunakan imageUrl dari data, atau placeholder jika tidak ada
         const imageUrl = debater.imageUrl || 'images/placeholder_profile.jpg';
 
         card.innerHTML = `
@@ -581,29 +580,27 @@ function renderSpecificDebaterProfile() {
     const debater = debatersData[debaterName];
     const imageUrl = debater.imageUrl || 'images/placeholder_profile_wide.jpg';
 
-    // Membuat HTML untuk detail kemenangan
-    let winsHtml = '';
-    const winMethods = Object.keys(debater.breakdown.wins).filter(method => debater.breakdown.wins[method] > 0);
-    winMethods.forEach(method => {
-        winsHtml += `
-            <div class="detail-item">
-                <span class="label">${method}</span>
-                <span class="count">${debater.breakdown.wins[method]}</span>
-            </div>
-        `;
-    });
-
-    // Membuat HTML untuk detail kekalahan
-    let lossesHtml = '';
-    const lossMethods = Object.keys(debater.breakdown.losses).filter(method => debater.breakdown.losses[method] > 0);
-    lossMethods.forEach(method => {
-        lossesHtml += `
-            <div class="detail-item">
-                <span class="label">${method}</span>
-                <span class="count">${debater.breakdown.losses[method]}</span>
-            </div>
-        `;
-    });
+    // Menghilangkan bagian ini sepenuhnya
+    // let winsHtml = '';
+    // const winMethods = Object.keys(debater.breakdown.wins).filter(method => debater.breakdown.wins[method] > 0);
+    // winMethods.forEach(method => {
+    //     winsHtml += `
+    //         <div class="detail-item">
+    //             <span class="label">${method}</span>
+    //             <span class="count">${debater.breakdown.wins[method]}</span>
+    //         </div>
+    //     `;
+    // });
+    // let lossesHtml = '';
+    // const lossMethods = Object.keys(debater.breakdown.losses).filter(method => debater.breakdown.losses[method] > 0);
+    // lossMethods.forEach(method => {
+    //     lossesHtml += `
+    //         <div class="detail-item">
+    //             <span class="label">${method}</span>
+    //             <span class="count">${debater.breakdown.losses[method]}</span>
+    //         </div>
+    //     `;
+    // });
 
     const profileHTML = `
         <div class="single-profile-card">
@@ -642,16 +639,6 @@ function renderSpecificDebaterProfile() {
                         <div class="record-box loss-box">
                             <span class="label">LOSSES</span>
                             <span class="count">${debater.record.L}</span>
-                        </div>
-                    </div>
-                    <div class="record-detail-grid">
-                        <div class="detail-column">
-                            <h5>WINS</h5>
-                            ${winsHtml || '<p style="font-size: 0.9rem; color: var(--text-secondary);">No data</p>'}
-                        </div>
-                        <div class="detail-column">
-                            <h5>LOSSES</h5>
-                            ${lossesHtml || '<p style="font-size: 0.9rem; color: var(--text-secondary);">No data</p>'}
                         </div>
                     </div>
                 </div>
