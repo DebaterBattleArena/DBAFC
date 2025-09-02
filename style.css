@@ -386,7 +386,6 @@ h2.page-title {
     border: none;
 }
 
-/* --- PERBAIKAN TATA LETAK DETAIL PROFIL DI SINI --- */
 .profile-info-overlay {
     position: absolute;
     bottom: 0;
@@ -408,8 +407,8 @@ h2.page-title {
 
 .profile-info-overlay .details {
     display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+    flex-wrap: wrap;
+    gap: 1.5rem;
     margin-top: 1rem;
 }
 
@@ -429,7 +428,7 @@ h2.page-title {
     font-weight: 400;
     color: var(--text-primary);
 }
-/* --- AKHIR PERBAIKAN TATA LETAK DETAIL PROFIL --- */
+
 
 .profile-content {
     background-color: var(--card-bg);
@@ -437,66 +436,89 @@ h2.page-title {
     margin-top: 0;
 }
 
-/* --- PERBAIKAN TATA LETAK BREAKDOWN DI SINI --- */
+/* PERBAIKAN TAMPILAN REKOR WLD DI SINI */
 .profile-record {
-    padding: 0;
-    margin-top: 2rem;
+    background-color: var(--card-bg); /* Beri warna latar belakang */
+    padding: 1.5rem;
+    border-radius: 5px;
 }
 
 .profile-record h4 {
     font-size: 1.5rem;
     font-weight: 900;
     text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.record-summary {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
     margin-bottom: 1rem;
 }
 
-.record-breakdown {
-    display: flex;
-    justify-content: space-between;
-    gap: 1.5rem;
-    margin-top: 1rem;
-    flex-wrap: wrap; /* Memastikan kolom bisa ke bawah jika layar kecil */
-}
-
-.record-breakdown .column {
-    flex: 1;
+.record-box {
     text-align: center;
-    padding: 1.5rem;
+    font-weight: 900;
+    padding: 0.75rem 1.5rem;
     border-radius: 5px;
-    color: var(--text-primary);
+    min-width: 120px;
 }
 
-.record-breakdown .column.win-detail {
+.record-box .count {
+    font-size: 1.5rem;
+    display: block;
+}
+
+.record-box .label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: var(--dark-bg);
+}
+
+.win-box {
     background-color: var(--win-color);
 }
 
-.record-breakdown .column.loss-detail {
+.loss-box {
     background-color: var(--loss-color);
 }
 
-.record-breakdown .column.draw-detail {
-    background-color: var(--accent-yellow);
+.record-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dua kolom untuk detail W/L */
+    gap: 1.5rem;
 }
 
-.record-breakdown h5 {
+.detail-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.detail-column h5 {
     font-size: 1rem;
     font-weight: 700;
     text-transform: uppercase;
-    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
 }
 
-.record-breakdown .method-item {
+.detail-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 0.9rem;
-    margin-bottom: 0.2rem;
 }
 
-.record-breakdown .method-item .count {
-    font-weight: bold;
+.detail-item .label {
+    color: var(--text-primary);
 }
-/* --- AKHIR PERBAIKAN TATA LETAK BREAKDOWN --- */
+
+.detail-item .count {
+    font-weight: bold;
+    color: var(--text-primary);
+}
+/* AKHIR PERBAIKAN TAMPILAN WLD */
 
 .match-history-section {
     margin-top: 3rem;
