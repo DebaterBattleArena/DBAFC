@@ -1,186 +1,248 @@
 const debatersData = {
     'HIROO': {
         country: 'Indonesia 🇮🇩',
+        age: 'UNKNOWN',
+        community: 'DBA Official',
         status: 'ACTIVE',
         division: 'Mid Tier',
         matches: []
     },
     'RANZT': {
         country: 'Indonesia 🇮🇩',
+        age: 'UNKNOWN',
+        community: 'DBA Official',
         status: 'ACTIVE',
         division: 'Mid Tier',
         matches: []
     },
     'ZOGRATIS': {
         country: 'Indonesia 🇮🇩',
+        age: 'UNKNOWN',
+        community: 'Community A',
         status: 'ACTIVE',
         division: 'High Tier',
         matches: []
     },
     'PRATAMA': {
         country: 'Indonesia 🇮🇩',
+        age: 'UNKNOWN',
+        community: 'Community B',
         status: 'ACTIVE',
         division: 'High Tier',
         matches: []
     },
     'AHENG': {
         country: 'Indonesia 🇮🇩',
+        age: 'UNKNOWN',
+        community: 'Community A',
         status: 'ACTIVE',
         division: 'High Tier',
         matches: []
     },
     'ARYANWT': {
         country: 'Indonesia 🇮🇩',
+        age: 'UNKNOWN',
+        community: 'DBA Official',
         status: 'ACTIVE',
         division: 'High Tier',
         matches: []
     },
     'THINZEL': {
         country: 'Indonesia 🇮🇩',
+        age: 'UNKNOWN',
+        community: 'Community C',
         status: 'ACTIVE',
         division: 'Low Tier',
         matches: []
     },
     'LIANX': {
         country: 'Indonesia 🇮🇩',
+        age: 'UNKNOWN',
+        community: 'DBA Official',
         status: 'ACTIVE',
         division: 'High Tier',
         matches: []
     },
     'VALEN': {
         country: 'Indonesia 🇮🇩',
+        age: 'UNKNOWN',
+        community: 'Community A',
         status: 'ACTIVE',
         division: 'Mid Tier',
         matches: []
     },
     'KUREJI': {
         country: 'Indonesia 🇮🇩',
+        age: 'UNKNOWN',
+        community: 'Community B',
         status: 'ACTIVE',
         division: 'Low Tier',
         matches: []
     },
     'KARIZ': {
         country: 'Indonesia 🇮🇩',
+        age: 'UNKNOWN',
+        community: 'Community A',
         status: 'ACTIVE',
         division: 'High Tier',
         matches: []
     },
     'FARRAS': {
         country: 'Indonesia 🇮🇩',
+        age: 'UNKNOWN',
+        community: 'Community B',
         status: 'ACTIVE',
         division: 'Low Tier',
         matches: []
     },
     'ADYY': {
         country: 'Malaysia 🇲🇾',
+        age: 'UNKNOWN',
+        community: 'Community D',
         status: 'ACTIVE',
         division: 'High Tier',
         matches: []
     },
     'RYUU': {
         country: 'Malaysia 🇲🇾',
+        age: 'UNKNOWN',
+        community: 'Community E',
         status: 'ACTIVE',
         division: 'High Tier',
         matches: []
     },
     'MUCHIBEI': {
         country: 'Malaysia 🇲🇾',
+        age: 'UNKNOWN',
+        community: 'Community D',
         status: 'ACTIVE',
         division: 'High Tier',
         matches: []
     },
     'RENJI': {
         country: 'Malaysia 🇲🇾',
+        age: 'UNKNOWN',
+        community: 'Community D',
         status: 'ACTIVE',
         division: 'Mid Tier',
         matches: []
     },
     'RIM': {
         country: 'Malaysia 🇲🇾',
+        age: 'UNKNOWN',
+        community: 'Community E',
         status: 'ACTIVE',
         division: 'Low Tier',
         matches: []
     },
     'SHADE': {
         country: 'Malaysia 🇲🇾',
+        age: 'UNKNOWN',
+        community: 'Community D',
         status: 'ACTIVE',
         division: 'High Tier',
         matches: []
     },
     'KYUKI': {
         country: 'Malaysia 🇲🇾',
+        age: 'UNKNOWN',
+        community: 'Community F',
         status: 'ACTIVE',
         division: 'High Tier',
         matches: []
     },
     'KLEIN': {
         country: 'Vietnam 🇻🇳',
+        age: 'UNKNOWN',
+        community: 'Community G',
         status: 'INACTIVE',
         division: 'High Tier',
         matches: []
     },
     'KAZ': {
         country: 'Philippines 🇵🇭',
+        age: 'UNKNOWN',
+        community: 'Community H',
         status: 'ACTIVE',
         division: 'Mid Tier',
         matches: []
     },
     'AARON': {
         country: 'Mexico 🇲🇽',
+        age: 'UNKNOWN',
+        community: 'Community I',
         status: 'ACTIVE',
         division: 'High Tier',
         matches: []
     },
     'XAVIER': {
         country: 'Brazil 🇧🇷',
+        age: 'UNKNOWN',
+        community: 'Community J',
         status: 'INACTIVE',
         division: 'Mid Tier',
         matches: []
     },
     'MIKAEL': {
         country: 'Brazil 🇧🇷',
+        age: 'UNKNOWN',
+        community: 'Community K',
         status: 'ACTIVE',
         division: 'High Tier',
         matches: []
     },
     'RABBITTO': {
         country: 'Canada 🇨🇦',
+        age: 'UNKNOWN',
+        community: 'Community L',
         status: 'ACTIVE',
         division: 'High Tier',
         matches: []
     },
     'HYRUKI': {
         country: 'Italy 🇮🇹',
+        age: 'UNKNOWN',
+        community: 'Community M',
         status: 'ACTIVE',
         division: 'High Tier',
         matches: []
     },
     'LARNEX': {
         country: 'France 🇫🇷',
+        age: 'UNKNOWN',
+        community: 'Community N',
         status: 'INACTIVE',
         division: 'Mid Tier',
         matches: []
     },
     'IULIAN': {
         country: 'Romania 🇷🇴',
+        age: 'UNKNOWN',
+        community: 'Community O',
         status: 'ACTIVE',
         division: 'Low Tier',
         matches: []
     },
     'HOMURA KIN': {
         country: 'Russia 🇷🇺',
+        age: 'UNKNOWN',
+        community: 'Community P',
         status: 'ACTIVE',
         division: 'Mid Tier',
         matches: []
     },
     'YULZ CLOVER': {
         country: 'Unknown ❓',
+        age: 'UNKNOWN',
+        community: 'Community Q',
         status: 'ACTIVE',
         division: 'Mid Tier',
         matches: []
     },
     'RAJU': {
         country: 'Unknown ❓',
+        age: 'UNKNOWN',
+        community: 'Community R',
         status: 'ACTIVE',
         division: 'High Tier',
         matches: []
@@ -324,17 +386,21 @@ function renderSpecificDebaterProfile() {
                 <img src="images/placeholder_profile.jpg" alt="${debaterName}">
                 <div class="profile-info">
                     <h3>${debaterName}</h3>
-                    <p>${debater.country} | ${debater.division}</p>
+                    <p>${debater.community}</p>
                 </div>
             </div>
             <div class="profile-details">
                 <div class="detail-box">
-                    <h4>Status</h4>
-                    <p>${debater.status}</p>
+                    <h4>DIVISION</h4>
+                    <p>${debater.division.toUpperCase()}</p>
                 </div>
                 <div class="detail-box">
-                    <h4>Record</h4>
-                    <p>${debater.record.W}–${debater.record.L}–${debater.record.D}</p>
+                    <h4>COUNTRY</h4>
+                    <p>${debater.country.toUpperCase()}</p>
+                </div>
+                <div class="detail-box">
+                    <h4>AGE</h4>
+                    <p>${debater.age.toUpperCase()}</p>
                 </div>
             </div>
             <div class="profile-record">
