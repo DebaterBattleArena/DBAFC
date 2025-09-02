@@ -6,7 +6,6 @@ const debatersData = {
         status: 'ACTIVE',
         division: 'MID TIER',
         imageUrl: 'images/Nama Proyek 71.png',
-        heroImageUrl: 'images/Nama Proyek 71_wide.png', // Tambahkan properti ini
         record: { W: 2, L: 0, D: 0 },
         breakdown: {
             wins: { KO: 1, UD: 1, SD: 0 },
@@ -21,7 +20,6 @@ const debatersData = {
         status: 'ACTIVE',
         division: 'Mid Tier',
         imageUrl: 'images/ranzt_profile.jpg',
-        heroImageUrl: 'images/ranzt_wide.png', // Contoh
         record: { W: 1, L: 0, D: 0 },
         breakdown: {
             wins: { KO: 1, UD: 0, SD: 0 },
@@ -36,7 +34,6 @@ const debatersData = {
         status: 'ACTIVE',
         division: 'High Tier',
         imageUrl: 'images/zogratis_profile.jpg',
-        heroImageUrl: 'images/zogratis_wide.png',
         record: { W: 1, L: 1, D: 0 },
         breakdown: {
             wins: { KO: 1, UD: 0, SD: 0 },
@@ -51,7 +48,6 @@ const debatersData = {
         status: 'ACTIVE',
         division: 'High Tier',
         imageUrl: 'images/pratama_profile.jpg',
-        heroImageUrl: 'images/pratama_wide.png',
         record: { W: 1, L: 0, D: 0 },
         breakdown: {
             wins: { KO: 0, UD: 1, SD: 0 },
@@ -66,7 +62,6 @@ const debatersData = {
         status: 'ACTIVE',
         division: 'High Tier',
         imageUrl: 'images/aheng_profile.jpg',
-        heroImageUrl: 'images/aheng_wide.png',
         record: { W: 0, L: 1, D: 0 },
         breakdown: {
             wins: { KO: 0, UD: 0, SD: 0 },
@@ -81,7 +76,6 @@ const debatersData = {
         status: 'ACTIVE',
         division: 'High Tier',
         imageUrl: 'images/aryanwt_profile.jpg',
-        heroImageUrl: 'images/aryanwt_wide.png',
         record: { W: 1, L: 1, D: 0 },
         breakdown: {
             wins: { KO: 0, UD: 1, SD: 0 },
@@ -96,7 +90,6 @@ const debatersData = {
         status: 'ACTIVE',
         division: 'Low Tier',
         imageUrl: 'images/thinzel_profile.jpg',
-        heroImageUrl: 'images/thinzel_wide.png',
         record: { W: 0, L: 1, D: 0 },
         breakdown: {
             wins: { KO: 0, UD: 0, SD: 0 },
@@ -111,7 +104,6 @@ const debatersData = {
         status: 'ACTIVE',
         division: 'High Tier',
         imageUrl: 'images/lianx_profile.jpg',
-        heroImageUrl: 'images/lianx_wide.png',
         record: { W: 1, L: 0, D: 0 },
         breakdown: {
             wins: { KO: 0, UD: 1, SD: 0 },
@@ -126,7 +118,6 @@ const debatersData = {
         status: 'ACTIVE',
         division: 'Mid Tier',
         imageUrl: 'images/valen_profile.jpg',
-        heroImageUrl: 'images/valen_wide.png',
         record: { W: 0, L: 0, D: 0 },
         breakdown: {
             wins: { KO: 0, UD: 0, SD: 0 },
@@ -141,7 +132,6 @@ const debatersData = {
         status: 'ACTIVE',
         division: 'Low Tier',
         imageUrl: 'images/kureji_profile.jpg',
-        heroImageUrl: 'images/kureji_wide.png',
         record: { W: 0, L: 0, D: 0 },
         breakdown: {
             wins: { KO: 0, UD: 0, SD: 0 },
@@ -156,7 +146,6 @@ const debatersData = {
         status: 'ACTIVE',
         division: 'High Tier',
         imageUrl: 'images/kariz_profile.jpg',
-        heroImageUrl: 'images/kariz_wide.png',
         record: { W: 0, L: 0, D: 0 },
         breakdown: {
             wins: { KO: 0, UD: 0, SD: 0 },
@@ -171,7 +160,6 @@ const debatersData = {
         status: 'ACTIVE',
         division: 'Low Tier',
         imageUrl: 'images/farras_profile.jpg',
-        heroImageUrl: 'images/farras_wide.png',
         record: { W: 0, L: 0, D: 0 },
         breakdown: {
             wins: { KO: 0, UD: 0, SD: 0 },
@@ -186,7 +174,6 @@ const debatersData = {
         status: 'ACTIVE',
         division: 'High Tier',
         imageUrl: 'images/adyy_profile.jpg',
-        heroImageUrl: 'images/adyy_wide.png',
         record: { W: 1, L: 1, D: 0 },
         breakdown: {
             wins: { KO: 1, UD: 0, SD: 0 },
@@ -201,7 +188,6 @@ const debatersData = {
         status: 'ACTIVE',
         division: 'High Tier',
         imageUrl: 'images/ryuu_profile.jpg',
-        heroImageUrl: 'images/ryuu_wide.png',
         record: { W: 1, L: 1, D: 0 },
         breakdown: {
             wins: { KO: 0, UD: 1, SD: 0 },
@@ -216,7 +202,6 @@ const debatersData = {
         status: 'ACTIVE',
         division: 'High Tier',
         imageUrl: 'images/muchibei_profile.jpg',
-        heroImageUrl: 'images/muchibei_wide.png',
         record: { W: 0, L: 1, D: 0 },
         breakdown: {
             wins: { KO: 0, UD: 0, SD: 0 },
@@ -231,7 +216,6 @@ const debatersData = {
         status: 'ACTIVE',
         division: 'Mid Tier',
         imageUrl: 'images/renji_profile.jpg',
-        heroImageUrl: 'images/renji_wide.png',
         record: { W: 0, L: 1, D: 0 },
         breakdown: {
             wins: { KO: 0, UD: 0, SD: 0 },
@@ -246,7 +230,6 @@ const debatersData = {
         status: 'ACTIVE',
         division: 'Low Tier',
         imageUrl: 'images/rim_profile.jpg',
-        heroImageUrl: 'images/rim_wide.png',
         record: { W: 0, L: 1, D: 0 },
         breakdown: {
             wins: { KO: 0, UD: 0, SD: 0 },
@@ -261,7 +244,6 @@ const debatersData = {
         status: 'ACTIVE',
         division: 'High Tier',
         imageUrl: 'images/shade_profile.jpg',
-        heroImageUrl: 'images/shade_wide.png',
         record: { W: 1, L: 1, D: 0 },
         breakdown: {
             wins: { KO: 1, UD: 0, SD: 0 },
@@ -276,7 +258,6 @@ const debatersData = {
         status: 'ACTIVE',
         division: 'High Tier',
         imageUrl: 'images/kyuki_profile.jpg',
-        heroImageUrl: 'images/kyuki_wide.png',
         record: { W: 1, L: 0, D: 0 },
         breakdown: {
             wins: { KO: 1, UD: 0, SD: 0 },
@@ -291,7 +272,6 @@ const debatersData = {
         status: 'INACTIVE',
         division: 'High Tier',
         imageUrl: 'images/klein_profile.jpg',
-        heroImageUrl: 'images/klein_wide.png',
         record: { W: 0, L: 0, D: 0 },
         breakdown: {
             wins: { KO: 0, UD: 0, SD: 0 },
@@ -306,7 +286,6 @@ const debatersData = {
         status: 'ACTIVE',
         division: 'Mid Tier',
         imageUrl: 'images/kaz_profile.jpg',
-        heroImageUrl: 'images/kaz_wide.png',
         record: { W: 0, L: 1, D: 0 },
         breakdown: {
             wins: { KO: 0, UD: 0, SD: 0 },
@@ -321,7 +300,6 @@ const debatersData = {
         status: 'ACTIVE',
         division: 'High Tier',
         imageUrl: 'images/aaron_profile.jpg',
-        heroImageUrl: 'images/aaron_wide.png',
         record: { W: 1, L: 0, D: 0 },
         breakdown: {
             wins: { KO: 0, UD: 1, SD: 0 },
@@ -336,7 +314,6 @@ const debatersData = {
         status: 'INACTIVE',
         division: 'Mid Tier',
         imageUrl: 'images/xavier_profile.jpg',
-        heroImageUrl: 'images/xavier_wide.png',
         record: { W: 0, L: 0, D: 0 },
         breakdown: {
             wins: { KO: 0, UD: 0, SD: 0 },
@@ -351,7 +328,6 @@ const debatersData = {
         status: 'ACTIVE',
         division: 'High Tier',
         imageUrl: 'images/mikael_profile.jpg',
-        heroImageUrl: 'images/mikael_wide.png',
         record: { W: 0, L: 0, D: 0 },
         breakdown: {
             wins: { KO: 0, UD: 0, SD: 0 },
@@ -366,7 +342,6 @@ const debatersData = {
         status: 'ACTIVE',
         division: 'High Tier',
         imageUrl: 'images/rabbito_profile.jpg',
-        heroImageUrl: 'images/rabbito_wide.png',
         record: { W: 0, L: 0, D: 0 },
         breakdown: {
             wins: { KO: 0, UD: 0, SD: 0 },
@@ -381,7 +356,6 @@ const debatersData = {
         status: 'ACTIVE',
         division: 'High Tier',
         imageUrl: 'images/hyruki_profile.jpg',
-        heroImageUrl: 'images/hyruki_wide.png',
         record: { W: 0, L: 0, D: 0 },
         breakdown: {
             wins: { KO: 0, UD: 0, SD: 0 },
@@ -396,7 +370,6 @@ const debatersData = {
         status: 'INACTIVE',
         division: 'Mid Tier',
         imageUrl: 'images/larnex_profile.jpg',
-        heroImageUrl: 'images/larnex_wide.png',
         record: { W: 0, L: 0, D: 0 },
         breakdown: {
             wins: { KO: 0, UD: 0, SD: 0 },
@@ -411,7 +384,6 @@ const debatersData = {
         status: 'ACTIVE',
         division: 'Low Tier',
         imageUrl: 'images/iulian_profile.jpg',
-        heroImageUrl: 'images/iulian_wide.png',
         record: { W: 0, L: 0, D: 0 },
         breakdown: {
             wins: { KO: 0, UD: 0, SD: 0 },
@@ -426,7 +398,6 @@ const debatersData = {
         status: 'ACTIVE',
         division: 'Mid Tier',
         imageUrl: 'images/homura_kin_profile.jpg',
-        heroImageUrl: 'images/homura_kin_wide.png',
         record: { W: 0, L: 0, D: 0 },
         breakdown: {
             wins: { KO: 0, UD: 0, SD: 0 },
@@ -441,7 +412,6 @@ const debatersData = {
         status: 'ACTIVE',
         division: 'Mid Tier',
         imageUrl: 'images/yulz_clover_profile.jpg',
-        heroImageUrl: 'images/yulz_clover_wide.png',
         record: { W: 1, L: 0, D: 0 },
         breakdown: {
             wins: { KO: 0, UD: 1, SD: 0 },
@@ -456,7 +426,6 @@ const debatersData = {
         status: 'ACTIVE',
         division: 'High Tier',
         imageUrl: 'images/raju_profile.jpg',
-        heroImageUrl: 'images/raju_wide.png',
         record: { W: 0, L: 1, D: 0 },
         breakdown: {
             wins: { KO: 0, UD: 0, SD: 0 },
@@ -587,7 +556,9 @@ function renderDebaterProfiles() {
         card.className = 'debater-card';
         card.href = `profile.html?name=${encodeURIComponent(name)}`;
 
+        // Menggunakan imageUrl dari data, atau placeholder jika tidak ada
         const imageUrl = debater.imageUrl || 'images/placeholder_profile.jpg';
+
         card.innerHTML = `
             <img src="${imageUrl}" alt="${name}">
             <h3>${name}</h3>
@@ -608,44 +579,36 @@ function renderSpecificDebaterProfile() {
     }
 
     const debater = debatersData[debaterName];
-    // Gunakan heroImageUrl jika ada, jika tidak, gunakan imageUrl, jika tidak ada juga, gunakan placeholder
-    const heroImageUrl = debater.heroImageUrl || debater.imageUrl || 'images/placeholder_profile_wide.jpg';
+    const imageUrl = debater.imageUrl || 'images/placeholder_profile_wide.jpg';
 
     // Membuat HTML untuk detail kemenangan
     let winsHtml = '';
     const winMethods = Object.keys(debater.breakdown.wins).filter(method => debater.breakdown.wins[method] > 0);
     winMethods.forEach(method => {
         winsHtml += `
-            <div class="method-item">
-                <span class="method">${method}</span>
+            <div class="detail-item">
+                <span class="label">${method}</span>
                 <span class="count">${debater.breakdown.wins[method]}</span>
             </div>
         `;
     });
-    if (winsHtml === '') {
-        winsHtml = '<p class="no-data">No data</p>';
-    }
 
     // Membuat HTML untuk detail kekalahan
     let lossesHtml = '';
     const lossMethods = Object.keys(debater.breakdown.losses).filter(method => debater.breakdown.losses[method] > 0);
     lossMethods.forEach(method => {
         lossesHtml += `
-            <div class="method-item">
-                <span class="method">${method}</span>
+            <div class="detail-item">
+                <span class="label">${method}</span>
                 <span class="count">${debater.breakdown.losses[method]}</span>
             </div>
         `;
     });
-    if (lossesHtml === '') {
-        lossesHtml = '<p class="no-data">No data</p>';
-    }
 
-    // Perbarui HTML untuk menggabungkan WINS, LOSSES, dan DRAWS
     const profileHTML = `
         <div class="single-profile-card">
             <div class="profile-hero">
-                <img src="${heroImageUrl}" alt="${debaterName}">
+                <img src="${imageUrl}" alt="${debaterName}">
                 <div class="profile-info-overlay">
                     <h3>${debaterName}</h3>
                     <div class="details">
@@ -671,18 +634,24 @@ function renderSpecificDebaterProfile() {
             <div class="profile-content">
                 <div class="profile-record">
                     <h4>BREAKDOWN</h4>
-                    <div class="record-breakdown">
-                        <div class="column win-detail">
-                            <h5 class="record-count">WINS - ${debater.record.W}</h5>
-                            ${winsHtml}
+                    <div class="record-summary">
+                        <div class="record-box win-box">
+                            <span class="label">WINS</span>
+                            <span class="count">${debater.record.W}</span>
                         </div>
-                        <div class="column loss-detail">
-                            <h5 class="record-count">LOSSES - ${debater.record.L}</h5>
-                            ${lossesHtml}
+                        <div class="record-box loss-box">
+                            <span class="label">LOSSES</span>
+                            <span class="count">${debater.record.L}</span>
                         </div>
-                        <div class="column draw-detail">
-                            <h5 class="record-count">DRAWS - ${debater.record.D}</h5>
-                            <p class="no-data">No data</p>
+                    </div>
+                    <div class="record-detail-grid">
+                        <div class="detail-column">
+                            <h5>WINS</h5>
+                            ${winsHtml || '<p style="font-size: 0.9rem; color: var(--text-secondary);">No data</p>'}
+                        </div>
+                        <div class="detail-column">
+                            <h5>LOSSES</h5>
+                            ${lossesHtml || '<p style="font-size: 0.9rem; color: var(--text-secondary);">No data</p>'}
                         </div>
                     </div>
                 </div>
@@ -709,7 +678,6 @@ function renderSpecificDebaterProfile() {
 
     container.innerHTML = profileHTML;
 }
-
 
 function renderRanking() {
     const ranking = calculateRanking();
