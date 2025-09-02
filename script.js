@@ -153,12 +153,12 @@ const debatersData = {
         },
         matches: []
     },
-    'FARRAS': {
-        country: 'INDONESIA',
+    'THONG': {
+        country: 'LAOS',
         age: 'UNKNOWN',
         community: 'DBA',
         status: 'ACTIVE',
-        division: 'LOW TIER',
+        division: 'HIGH TIER',
         imageUrl: 'images/farras_profile.jpg',
         record: { W: 0, L: 0, D: 0 },
         breakdown: {
