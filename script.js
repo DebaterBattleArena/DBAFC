@@ -1,10 +1,10 @@
 const debatersData = {
     'HIROO': {
-        country: 'Indonesia 🇮🇩',
+        country: 'INDONESIA',
         age: 'UNKNOWN',
-        community: 'DBA Official',
+        community: 'DBA',
         status: 'ACTIVE',
-        division: 'Mid Tier',
+        division: 'MID TIER',
         imageUrl: 'images/Nama Proyek 71.png',
         record: { W: 2, L: 0, D: 0 },
         breakdown: {
