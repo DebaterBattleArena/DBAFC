@@ -407,8 +407,8 @@ h2.page-title {
 
 .profile-info-overlay .details {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
+    flex-direction: column;
+    gap: 0.5rem;
     margin-top: 1rem;
 }
 
@@ -436,89 +436,89 @@ h2.page-title {
     margin-top: 0;
 }
 
-/* PERBAIKAN TAMPILAN REKOR WLD DI SINI */
 .profile-record {
-    background-color: var(--card-bg); /* Beri warna latar belakang */
-    padding: 1.5rem;
-    border-radius: 5px;
+    background-color: transparent;
+    padding: 0;
+    margin-top: 2rem;
 }
 
 .profile-record h4 {
     font-size: 1.5rem;
     font-weight: 900;
     text-transform: uppercase;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    padding-left: 5%;
 }
 
 .record-summary {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.record-box {
-    text-align: center;
-    font-weight: 900;
-    padding: 0.75rem 1.5rem;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-color: var(--card-bg);
+    padding: 1rem;
     border-radius: 5px;
-    min-width: 120px;
+    text-align: center;
 }
 
-.record-box .count {
-    font-size: 1.5rem;
-    display: block;
+.record-summary .wins,
+.record-summary .losses,
+.record-summary .draws {
+    flex-grow: 1;
+    text-align: center;
 }
 
-.record-box .label {
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    color: var(--dark-bg);
+.record-summary span {
+    color: var(--text-primary);
 }
 
-.win-box {
-    background-color: var(--win-color);
+.record-summary .divider {
+    color: var(--text-secondary);
+    margin: 0 1rem;
 }
 
-.loss-box {
-    background-color: var(--loss-color);
-}
-
-.record-detail-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Dua kolom untuk detail W/L */
-    gap: 1.5rem;
-}
-
-.detail-column {
+.record-breakdown {
     display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 5px;
 }
 
-.detail-column h5 {
+.record-breakdown .column {
+    flex: 1;
+}
+
+.record-breakdown h5 {
     font-size: 1rem;
     font-weight: 700;
     text-transform: uppercase;
-    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
 }
 
-.detail-item {
+.record-breakdown .method-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 0.9rem;
+    margin-bottom: 0.2rem;
 }
 
-.detail-item .label {
-    color: var(--text-primary);
-}
-
-.detail-item .count {
+.record-breakdown .method-item .count {
     font-weight: bold;
-    color: var(--text-primary);
 }
-/* AKHIR PERBAIKAN TAMPILAN WLD */
+
+.win-detail h5 {
+    color: var(--win-color);
+}
+
+.loss-detail h5 {
+    color: var(--loss-color);
+}
+
 
 .match-history-section {
     margin-top: 3rem;
