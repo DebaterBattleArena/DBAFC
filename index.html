@@ -3,135 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Debater Battle Arena (DBA)</title>
+    <title>DBA | Debater Battle Arena</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+
+    <div id="search-overlay" class="overlay hidden">
+        <div class="search-container-overlay">
+            <input type="text" id="searchInput" placeholder="CARI">
+            <button id="search-button-overlay">CARI</button>
+            <button id="close-search-overlay" class="close-btn">&times;</button>
+        </div>
+    </div>
+
+    <div id="menu-overlay" class="overlay hidden">
+        <nav class="main-nav-overlay">
+            <div class="menu-header">
+                <select name="country" id="country-select">
+                    <option value="indonesia">INDONESIA</option>
+                    <option value="malaysia">MALAYSIA</option>
+                </select>
+                <button id="close-menu-overlay" class="close-btn">&times;</button>
+            </div>
+            <ul>
+                <li><a href="index.html">LAMAN UTAMA</a></li>
+                <li><a href="archive.html">GELARAN UTAMA</a></li>
+                <li><a href="#">TIKET</a></li>
+                <li><a href="debater.html">ATLET</a></li>
+                <li><a href="#">TERBARU</a></li>
+                <li><a href="#">TONTON</a></li>
+                <li><a href="#">BELANJA <i class="fas fa-external-link-alt"></i></a></li>
+                <li><a href="#">MAINKAN</a></li>
+                <li><a href="#">THE APPRENTICE <i class="fas fa-external-link-alt"></i></a></li>
+                <li><a href="#">TENTANG KAMI</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-weibo"></i></a>
+            </div>
+        </nav>
+    </div>
+
     <header>
         <div class="header-top">
             <div class="logo">
-                <img src="images/Nama Proyek 72.png" alt="DBA Logo">
+                <img src="images/logo.png" alt="DBA Logo">
             </div>
             <div class="header-right">
-                <div class="search-icon"><button id="search-toggle">🔍</button></div>
-                <div class="menu-icon"><button id="menu-toggle">☰</button></div>
+                <button id="search-toggle" class="search-icon">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button id="menu-toggle" class="menu-icon">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </div>
-        <div id="search-container" class="search-container hidden">
-            <input type="text" id="searchInput" placeholder="SEARCH">
-            <button id="searchButton">GO</button>
-        </div>
-        <nav id="main-nav" class="main-nav hidden">
-            <ul>
-                <li><a href="index.html">HOMEPAGE</a></li>
-                <li><a href="archive.html">EVENTS</a></li>
-                <li><a href="#">TICKETS</a></li>
-                <li><a href="profile.html">DEBATERS</a></li>
-                <li><a href="ranking.html">RANKINGS</a></li>
-                <li><a href="#">WATCH</a></li>
-                <li><a href="#">SHOP</a></li>
-            </ul>
-        </nav>
     </header>
 
     <main>
         <section class="upcoming-section">
             <div class="section-header">
-                <h2>COMING SOON</h2>
-                <a href="archive.html">PAST EVENTS ></a>
+                <h2>BERIKUTNYA</h2>
+                <a href="archive.html">GELARAN SEBELUMNYA <span class="arrow-right">›</span></a>
             </div>
-            <div class="poster-container">
-                <img src="images/Nama Proyek 73.png" alt="Upcoming Event">
-                <div class="event-details">
-                    <h3>DBA 3: Indonesia vs Malaysia 2</h3>
-                    <p>Sep 20 (Sat) 8.00PM WIB</p>
-                    <p>DBA, INDONESIA</p>
-                    <button class="buy-tickets">WAITING NOW</button>
+            <div class="upcoming-event-container">
+                <div class="event-timer">
+                    <span class="timer-value">02</span><span class="timer-label">HARI</span>
+                    <span class="timer-value">22</span><span class="timer-label">JAM</span>
+                    <span class="timer-value">37</span><span class="timer-label">MENIT</span>
                 </div>
-            </div>
-        </section>
-
-        <section class="related-videos">
-            <h2>ONGOING MATCHES</h2>
-            <div class="video-list">
-                <div class="video-card">
-                    <img src="images/placeholder_video.jpg" alt="Video Match">
-                    <div class="video-info">
-                        <p class="match-title">Yulz Clover vs Kazz</p>
-                        <p class="match-status win">WIN YULZ</p>
-                    </div>
+                <div class="event-poster">
+                    <img src="https://via.placeholder.com/1280x720.png?text=POSTER+ACARA+16:9" alt="Event Poster" class="responsive-poster">
                 </div>
-                <div class="video-card">
-                    <img src="images/placeholder_video.jpg" alt="Video Match">
-                    <div class="video-info">
-                        <p class="match-title">Iulian vs Kariz</p>
-                        <p class="match-status pending">PENDING</p>
-                    </div>
-                </div>
-                <div class="video-card">
-                    <img src="images/placeholder_video.jpg" alt="Video Match">
-                    <div class="video-info">
-                        <p class="match-title">Ranzt vs Hiroo</p>
-                        <p class="match-status pending">PENDING</p>
-                    </div>
-                </div>
-                <div class="video-card">
-                    <img src="images/placeholder_video.jpg" alt="Video Match">
-                    <div class="video-info">
-                        <p class="match-title">Adyy vs Aheng</p>
-                        <p class="match-status pending">PENDING</p>
-                    </div>
-                </div>
-                <div class="video-card">
-                    <img src="images/placeholder_video.jpg" alt="Video Match">
-                    <div class="video-info">
-                        <p class="match-title">Aaron vs Hyruki</p>
-                        <p class="match-status pending">PENDING</p>
-                    </div>
-                </div>
-            </div>
-            <button class="more-videos">MORE VIDEOS</button>
-        </section>
-
-        <section class="related-videos">
-            <h2>UPCOMING EVENTS</h2>
-            <div class="video-list">
-                <div class="video-card">
-                    <img src="images/placeholder_1x1.jpg" alt="Poster DBA Ragnarok">
-                    <div class="video-info">
-                        <p class="match-title">DBA Ragnarok</p>
-                        <p class="match-status upcoming">UPCOMING</p>
-                    </div>
-                </div>
-                <div class="video-card">
-                    <img src="images/placeholder_1x1.jpg" alt="Poster DBA Battle Memes">
-                    <div class="video-info">
-                        <p class="match-title">DBA Battle Memes</p>
-                        <p class="match-status upcoming">UPCOMING</p>
-                    </div>
-                </div>
-                <div class="video-card">
-                    <img src="images/placeholder_1x1.jpg" alt="Poster DBA 4">
-                    <div class="video-info">
-                        <p class="match-title">DBA 4</p>
-                        <p class="match-status upcoming">UPCOMING</p>
-                    </div>
+                <div class="event-details-overlay">
+                    <p class="event-date-location">SEP 6 (SAB) 8:00 WIB | Lumpinee Stadium, Bangkok</p>
+                    <h3 class="event-title">DBA FIGHT NIGHT 35: BUNTAN VS HEMETSBERGER</h3>
+                    <a href="#" class="buy-tickets-btn">BELI TIKET</a>
                 </div>
             </div>
         </section>
+        
+        <div class="main-content-area">
+            <section class="news-section">
+                <h2 class="page-title">Berita Utama</h2>
+                <div class="news-grid">
+                    <a href="#" class="news-card main-news">
+                        <img src="https://via.placeholder.com/1280x720.png?text=BERITA+UTAMA+16:9" alt="News Image">
+                        <div class="news-info">
+                            <h3>'Saya Tak Merasa Sebagai Juara' - Akbar Abdullaev Siap Kalahkan Ibragim Dauev Di ONE Fight Night 35</h3>
+                            <p class="read-more">› BACA</p>
+                        </div>
+                    </a>
+                    <a href="#" class="news-card sub-news">
+                        <img src="https://via.placeholder.com/640x360.png?text=BERITA+LAIN+1" alt="News Image">
+                        <div class="news-info">
+                            <h4>Sekaranglah Saatnya: Tye Ruotolo Ungkap Mengapa Ia Siap Untuk Debut MMA Di ONE Fight Night 35</h4>
+                        </div>
+                    </a>
+                    <a href="#" class="news-card sub-news">
+                        <img src="https://via.placeholder.com/640x360.png?text=BERITA+LAIN+2" alt="News Image">
+                        <div class="news-info">
+                            <h4>Hasil ONE Friday Fights 122: Asadula Imangazaliev Raih Kontrak Idaman Lewat KO Atas Panpayak</h4>
+                        </div>
+                    </a>
+                    <a href="#" class="news-card sub-news">
+                        <img src="https://via.placeholder.com/640x360.png?text=BERITA+LAIN+3" alt="News Image">
+                        <div class="news-info">
+                            <h4>'Saya Perlu Mengubah Gaya' - Johan Ghazali Siap Tunjukkan Perkembangan Di ONE Fight Night 35</h4>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </div>
     </main>
 
     <footer>
-        <p>SCROLL TO TOP</p>
+        <p>&copy; 2025 DBA. All Rights Reserved.</p>
         <div class="social-icons">
-            <a href="#"><img src="images/facebook-icon.png" alt="Facebook"></a>
-            <a href="#"><img src="images/x-icon.png" alt="X"></a>
-            <a href="#"><img src="images/instagram-icon.png" alt="Instagram"></a>
-            <a href="#"><img src="images/youtube-icon.png" alt="YouTube"></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-weibo"></i></a>
         </div>
-        <p>&copy; 2025 Debater Battle Arena. All Rights Reserved.</p>
-        <p>Privacy Policy | Terms of Use</p>
     </footer>
 
     <script src="script.js"></script>
