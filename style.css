@@ -36,7 +36,7 @@ body {
 }
 
 /* Judul, sub-judul, dan elemen penting lainnya */
-h1, h2, h3, h4, .section-header h2, .news-article-content p, .match-title, .buy-tickets, .match-status, .debater-card h3, .profile-info-overlay h3, .profile-record h4, .ranking-tier-card h3, .ranking-list li::before, .ranking-name, .ranking-points {
+h1, h2, h3, h4, .section-header h2, .news-article-content p, .match-title, .buy-tickets, .match-status, .debater-card h3, .profile-info-overlay h3, .profile-record h4, .ranking-tier-card h3, .ranking-list li::before, .ranking-name, .ranking-points, .event-title {
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
 }
@@ -165,16 +165,153 @@ main {
     margin: auto;
 }
 
-/* Perubahan utama di sini untuk background dan padding */
+/* ------- UPCOMING SECTION (DIRUBAH UNTUK MIRIP ONE CHAMPIONSHIP) -------- */
 .upcoming-section {
     position: relative;
-    color: var(--text-primary);
+    width: 100%;
     overflow: hidden;
     margin-bottom: 2rem;
-    /* Hilangkan padding default agar gambar bisa memenuhi layar */
     padding: 0;
 }
 
+.upcoming-background {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem 5%;
+}
+
+.header-upcoming {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.next-event {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    letter-spacing: 0.5px;
+}
+
+.past-events {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: var(--accent-yellow);
+    text-decoration: none;
+    letter-spacing: 0.5px;
+}
+
+.countdown-wrapper {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-top: -10px;
+}
+
+.countdown-item {
+    text-align: center;
+    padding: 0.4rem 0.8rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    min-width: 70px;
+}
+
+.countdown-value {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1;
+    display: block;
+}
+
+.countdown-label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.7rem;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    display: block;
+    margin-top: 5px;
+}
+
+.countdown-separator {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.event-info-wrapper {
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
+    padding-top: 5rem;
+    margin-top: auto;
+    padding-bottom: 1.5rem;
+    margin-left: -5%;
+    margin-right: -5%;
+    width: 110%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.event-date, .event-location {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    margin-bottom: 0.2rem;
+}
+
+.event-location {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.event-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.buy-tickets {
+    background-color: var(--accent-yellow);
+    color: var(--dark-bg);
+    border: none;
+    padding: 0.75rem 2rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.buy-tickets:hover {
+    background-color: #ffda44;
+}
+
+/* ========================================================== */
+/* SECTIONS LAINNYA */
+/* ========================================================== */
 .section-header {
     display: flex;
     justify-content: space-between;
@@ -189,96 +326,6 @@ main {
 .section-header a {
     color: var(--accent-yellow);
     font-size: 0.9rem;
-}
-
-.poster-container {
-    background-color: transparent;
-    text-align: left;
-    position: relative;
-    width: 100%; /* Pastikan ini 100% untuk mengisi lebar */
-}
-
-.poster-container img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 0; /* Hilangkan border-radius agar memenuhi sudut */
-}
-
-/* Overlay untuk detail acara */
-.event-details-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 2rem 5%; /* Tambahkan padding agar konten tidak menempel ke sisi */
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
-    box-sizing: border-box;
-}
-
-.event-details-overlay h3 {
-    font-size: 2.2rem;
-    margin: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-/* Font untuk teks abu-abu di bawah judul utama event */
-.event-details-overlay p {
-    font-family: 'Roboto', sans-serif; /* Mengubah ke Roboto */
-    color: var(--text-secondary); /* Warna abu-abu */
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-}
-
-/* Countdown */
-.countdown-timer {
-    display: flex;
-    gap: 1.5rem;
-    align-items: center;
-    margin-bottom: 1rem;
-}
-
-.countdown-box {
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-/* Font baru untuk angka hitungan mundur (Misal: Roboto Slab) */
-.countdown-box .value {
-    font-family: 'Roboto Slab', serif; /* Mengganti ke Roboto Slab */
-    font-size: 2.5rem;
-    font-weight: 900;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    line-height: 1;
-}
-
-.countdown-box .label {
-    font-family: 'Roboto', sans-serif; /* Tetap Roboto untuk label */
-    font-size: 0.75rem;
-    color: var(--text-secondary);
-    text-transform: uppercase;
-}
-
-/* Tombol */
-.buy-tickets {
-    background-color: var(--accent-yellow);
-    color: var(--dark-bg);
-    border: none;
-    padding: 1rem 2.5rem;
-    font-weight: 900;
-    cursor: pointer;
-    margin-top: 1rem;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-.buy-tickets:hover {
-    background-color: #ffda44;
 }
 
 /* Berita */
@@ -581,13 +628,13 @@ main {
 }
 
 .record-box .count {
-    font-family: 'Montserrat', sans-serif; /* Juga menggunakan Montserrat untuk count di profile record */
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
     display: block;
 }
 
 .record-box .label {
-    font-family: 'Roboto', sans-serif; /* Mengubah ke Roboto untuk label */
+    font-family: 'Roboto', sans-serif;
     font-size: 0.8rem;
     text-transform: uppercase;
     color: var(--dark-bg);
@@ -615,7 +662,6 @@ main {
 }
 
 .detail-column h5 {
-    font-family: 'Montserrat', sans-serif; /* Menggunakan Montserrat untuk h5 di detail-column */
     font-size: 1rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -630,12 +676,10 @@ main {
 }
 
 .detail-item .label {
-    font-family: 'Roboto', sans-serif; /* Mengubah ke Roboto untuk label */
     color: var(--text-primary);
 }
 
 .detail-item .count {
-    font-family: 'Montserrat', sans-serif; /* Menggunakan Montserrat untuk count */
     font-weight: bold;
     color: var(--text-primary);
 }
@@ -688,7 +732,6 @@ main {
 }
 
 .ranking-list li::before {
-    font-family: 'Montserrat', sans-serif; /* Font untuk nomor ranking */
     font-size: 1.5rem;
     font-weight: 900;
     color: var(--accent-yellow);
@@ -712,7 +755,6 @@ main {
 }
 
 .ranking-country {
-    font-family: 'Roboto', sans-serif; /* Font untuk negara ranking */
     font-size: 0.9rem;
     color: var(--text-secondary);
 }
@@ -729,24 +771,56 @@ main {
 
 /* Perubahan untuk tampilan mobile (max-width: 768px) */
 @media (max-width: 768px) {
-    .event-details-overlay {
-        padding: 1rem 5%; /* Menambahkan padding horizontal agar konten tidak menempel */
+    main {
+        padding: 0;
     }
 
-    .event-details-overlay h3 {
+    .upcoming-section {
+        margin-bottom: 2rem;
+    }
+
+    .upcoming-background {
+        height: 600px;
+        padding: 1.5rem 5%;
+    }
+
+    .header-upcoming {
+        padding: 0;
+    }
+
+    .event-info-wrapper {
+        margin-left: -5%;
+        margin-right: -5%;
+        width: 110%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .event-title {
         font-size: 1.5rem;
     }
 
-    /* Membuat gambar background memenuhi layar di atas latest news */
-    .upcoming-section {
-        margin-left: -5%; /* Mengatasi padding main */
-        margin-right: -5%; /* Mengatasi padding main */
-        width: auto; /* Mengatur lebar otomatis */
+    .countdown-wrapper {
+        gap: 0.3rem;
     }
 
-    .poster-container img {
-        height: 500px; /* Tinggi gambar yang lebih pas untuk mobile */
-        object-fit: cover; /* Memastikan gambar menutupi area tanpa terdistorsi */
+    .countdown-item {
+        min-width: 55px;
+        padding: 0.3rem 0.6rem;
+    }
+
+    .countdown-value {
+        font-size: 2rem;
+    }
+
+    .countdown-label {
+        font-size: 0.6rem;
+        margin-top: 3px;
+    }
+
+    .countdown-separator {
+        font-size: 2rem;
+        margin-bottom: 5px;
     }
 
     .header-right {
@@ -785,5 +859,10 @@ main {
     .match-history-section h4,
     .profile-record h4 {
         text-align: center;
+    }
+
+    .news-section, .related-videos, .event-results-section, .profile-main-section, .ranking-main-section, footer {
+        padding-left: 5%;
+        padding-right: 5%;
     }
 }
