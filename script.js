@@ -470,9 +470,9 @@ function updateCountdown() {
     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 
-    const daysElement = document.querySelector('.countdown-box:nth-child(1) .value');
-    const hoursElement = document.querySelector('.countdown-box:nth-child(2) .value');
-    const minutesElement = document.querySelector('.countdown-box:nth-child(3) .value');
+    const daysElement = document.getElementById('days-value');
+    const hoursElement = document.getElementById('hours-value');
+    const minutesElement = document.getElementById('minutes-value');
 
     if (distance > 0) {
         if (daysElement) daysElement.textContent = days.toString().padStart(2, '0');
@@ -485,12 +485,6 @@ function updateCountdown() {
         if (minutesElement) minutesElement.textContent = "00";
     }
 }
-
-// Panggil fungsi sekali saat halaman dimuat
-updateCountdown();
-
-// Perbarui setiap detik
-setInterval(updateCountdown, 1000);
 
 // Fungsi ini akan menghitung W, L, D dan breakdown berdasarkan data matches
 function populateDebaterData() {
@@ -789,10 +783,15 @@ function setupSearch() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Panggil fungsi utama saat halaman dimuat
     populateDebaterData();
     setupNavigation();
     setupSearch();
+    
+    // Perbarui countdown setiap detik
+    setInterval(updateCountdown, 1000);
 
+    // Panggil fungsi rendering sesuai dengan halaman yang sedang dibuka
     const path = window.location.pathname;
     if (path.includes('profile.html')) {
         const urlParams = new URLSearchParams(window.location.search);
