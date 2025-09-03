@@ -72,7 +72,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px; /* Tambahkan ini agar logo tetap di tengah bersama konten lain */
+    max-width: 1200px;
     margin: auto;
 }
 
@@ -140,10 +140,10 @@ header {
     width: 100%;
     text-align: left;
     margin-top: 1rem;
-    max-width: 1200px; /* Sesuaikan dengan header-top */
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 5%; /* Menambahkan padding horizontal */
+    padding: 0 5%;
 }
 
 .main-nav.hidden {
@@ -171,7 +171,7 @@ main {
     margin: auto;
 }
 
-/* ------- UPCOMING SECTION (DIRUBAH UNTUK MIRIP ONE CHAMPIONSHIP) -------- */
+/* ------- UPCOMING SECTION (SOLUSI BARU UNTUK HILANGKAN TUMPUKAN) -------- */
 .upcoming-section {
     position: relative;
     width: 100%;
@@ -185,16 +185,23 @@ main {
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    /* Menggunakan padding-bottom untuk mempertahankan rasio 4:3 (height / width = 3/4 = 0.75) */
-    padding-bottom: 75%; /* (3 / 4) * 100% = 75% */
-    height: 0; /* Set height ke 0 agar padding-bottom yang menentukan tinggi */
+    /* Gunakan padding-bottom untuk rasio 4:3 */
+    padding-bottom: 75%;
+    height: 0;
+    position: relative; /* Penting untuk penempatan konten di dalamnya */
+}
+
+/* Wadah untuk konten di dalam gambar latar belakang */
+.upcoming-content-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-left: 5%; /* Menyesuaikan padding di dalam background */
-    padding-right: 5%; /* Menyesuaikan padding di dalam background */
-    padding-top: 1.5rem; /* Menjaga padding atas */
-    position: relative; /* Penting agar elemen di dalamnya bisa absolute */
+    padding: 1.5rem 5%;
 }
 
 .header-upcoming {
@@ -202,11 +209,6 @@ main {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-bottom: 1rem;
-    position: absolute; /* Posisikan absolut di dalam upcoming-background */
-    top: 1.5rem; /* Sesuaikan dengan padding-top */
-    left: 5%; /* Sesuaikan dengan padding-left */
-    right: 5%; /* Sesuaikan dengan padding-right */
 }
 
 .next-event {
@@ -230,11 +232,7 @@ main {
     display: flex;
     align-items: baseline;
     gap: 0.5rem;
-    position: absolute; /* Posisikan absolut di dalam upcoming-background */
-    top: 50%; /* Sesuaikan posisi vertikal */
-    left: 5%; /* Sesuaikan dengan padding-left */
-    transform: translateY(-50%); /* Geser ke atas 50% dari tingginya sendiri */
-    z-index: 10;
+    margin-top: auto; /* Mendorong ke bawah di dalam wadah fleksibel */
 }
 
 .countdown-item {
@@ -279,13 +277,7 @@ main {
     background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
     padding-top: 5rem;
     padding-bottom: 1.5rem;
-    position: absolute; /* Posisikan absolut di dalam upcoming-background */
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding-left: 5%; /* Sesuaikan padding agar konten tidak menempel ke tepi */
-    padding-right: 5%; /* Sesuaikan padding agar konten tidak menempel ke tepi */
-    box-sizing: border-box; /* Pastikan padding dihitung dalam lebar */
+    margin-top: auto; /* Mendorong ke bawah di dalam wadah fleksibel */
 }
 
 .event-date, .event-location {
@@ -800,20 +792,15 @@ main {
     }
 
     .upcoming-background {
-        /* Tetap pakai padding-bottom 75% untuk rasio 4:3 */
         padding-bottom: 75%;
-        padding-top: 1rem; /* Sesuaikan padding atas untuk mobile */
+        padding: 0; /* Hapus padding agar konten dalam upcoming-content-container yang mengaturnya */
     }
-
-    .header-upcoming {
-        top: 1rem; /* Sesuaikan posisi header agar tetap di dalam */
-        left: 5%;
-        right: 5%;
-    }
-
-    .event-info-wrapper {
+    
+    .upcoming-content-container {
         padding-left: 5%;
         padding-right: 5%;
+        padding-top: 1rem;
+        padding-bottom: 1.5rem;
     }
 
     .event-title {
@@ -822,9 +809,6 @@ main {
 
     .countdown-wrapper {
         gap: 0.3rem;
-        top: 45%; /* Sesuaikan posisi countdown agar tidak terlalu dekat header/footer */
-        left: 5%;
-        transform: translateY(-50%);
     }
 
     .countdown-item {
