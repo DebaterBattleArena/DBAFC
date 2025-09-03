@@ -171,11 +171,10 @@ main {
     margin: auto;
 }
 
-/* ------- UPCOMING SECTION (SOLUSI BARU UNTUK HILANGKAN TUMPUKAN) -------- */
+/* ------- UPCOMING SECTION (SOLUSI TERBARU) -------- */
 .upcoming-section {
     position: relative;
     width: 100%;
-    overflow: hidden;
     margin-bottom: 2rem;
     padding: 0;
 }
@@ -188,20 +187,19 @@ main {
     /* Gunakan padding-bottom untuk rasio 4:3 */
     padding-bottom: 75%;
     height: 0;
-    position: relative; /* Penting untuk penempatan konten di dalamnya */
 }
 
-/* Wadah untuk konten di dalam gambar latar belakang */
-.upcoming-content-container {
+/* Atur posisi dan gaya untuk konten yang berada di atas gambar */
+.upcoming-content-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    padding: 1.5rem 5%; /* Tambahkan padding agar tidak menempel ke tepi */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 1.5rem 5%;
+    justify-content: space-between; /* Untuk mendorong elemen ke atas dan bawah */
 }
 
 .header-upcoming {
@@ -209,6 +207,7 @@ main {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    margin-bottom: 1rem;
 }
 
 .next-event {
@@ -232,7 +231,7 @@ main {
     display: flex;
     align-items: baseline;
     gap: 0.5rem;
-    margin-top: auto; /* Mendorong ke bawah di dalam wadah fleksibel */
+    margin-top: auto;
 }
 
 .countdown-item {
@@ -277,7 +276,7 @@ main {
     background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
     padding-top: 5rem;
     padding-bottom: 1.5rem;
-    margin-top: auto; /* Mendorong ke bawah di dalam wadah fleksibel */
+    margin-top: auto;
 }
 
 .event-date, .event-location {
@@ -793,14 +792,11 @@ main {
 
     .upcoming-background {
         padding-bottom: 75%;
-        padding: 0; /* Hapus padding agar konten dalam upcoming-content-container yang mengaturnya */
+        padding: 0;
     }
     
-    .upcoming-content-container {
-        padding-left: 5%;
-        padding-right: 5%;
-        padding-top: 1rem;
-        padding-bottom: 1.5rem;
+    .upcoming-content-overlay {
+        padding: 1rem 5%; /* Sesuaikan padding agar terlihat lebih rapi di mobile */
     }
 
     .event-title {
