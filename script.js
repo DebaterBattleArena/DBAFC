@@ -774,3 +774,35 @@ document.addEventListener('DOMContentLoaded', () => {
         renderArchive();
     }
 });
+// --- Fungsi Countdown Timer ---
+function updateCountdown() {
+    const eventDate = new Date("September 20, 2025 20:00:00").getTime();
+    const now = new Date().getTime();
+    const distance = eventDate - now;
+
+    // Menghitung hari, jam, dan menit
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+    const daysElement = document.querySelector('.countdown-box .value');
+    const hoursElement = document.querySelector('.countdown-box:nth-child(2) .value');
+    const minutesElement = document.querySelector('.countdown-box:nth-child(3) .value');
+
+    if (distance > 0) {
+        if (daysElement) daysElement.textContent = days.toString().padStart(2, '0');
+        if (hoursElement) hoursElement.textContent = hours.toString().padStart(2, '0');
+        if (minutesElement) minutesElement.textContent = minutes.toString().padStart(2, '0');
+    } else {
+        // Jika hitung mundur selesai
+        if (daysElement) daysElement.textContent = "00";
+        if (hoursElement) hoursElement.textContent = "00";
+        if (minutesElement) minutesElement.textContent = "00";
+    }
+}
+
+// Panggil fungsi sekali saat halaman dimuat
+updateCountdown();
+
+// Perbarui setiap detik
+setInterval(updateCountdown, 1000);
