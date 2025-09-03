@@ -459,7 +459,6 @@ const points = {
     'Kalah Main Card': 0
 };
 
-// Fungsi ini akan menghitung W, L, D dan breakdown berdasarkan data matches
 function populateDebaterData() {
     for (const name in debatersData) {
         debatersData[name].record = { W: 0, L: 0, D: 0 };
@@ -468,7 +467,6 @@ function populateDebaterData() {
     }
 
     matches.forEach(match => {
-        // Update records dan breakdown
         if (debatersData[match.winner]) {
             debatersData[match.winner].record.W++;
             debatersData[match.winner].breakdown.wins[match.method]++;
@@ -478,7 +476,6 @@ function populateDebaterData() {
             debatersData[match.loser].breakdown.losses[match.method]++;
         }
 
-        // Add match history
         if (debatersData[match.debater1]) {
             debatersData[match.debater1].matches.push({
                 opponent: match.debater2,
@@ -707,58 +704,74 @@ function renderArchive() {
     });
 }
 
-function setupNavigation() {
-    const menuToggle = document.getElementById('menu-toggle');
+function setupOverlayNavigation() {
     const searchToggle = document.getElementById('search-toggle');
-    const mainNav = document.getElementById('main-nav');
-    const searchContainer = document.getElementById('search-container');
+    const menuToggle = document.getElementById('menu-toggle');
+    const searchOverlay = document.getElementById('search-overlay');
+    const menuOverlay = document.getElementById('menu-overlay');
+    const closeSearchBtn = document.getElementById('close-search-overlay');
+    const closeMenuBtn = document.getElementById('close-menu-overlay');
     const searchInput = document.getElementById('searchInput');
 
-    if (menuToggle && mainNav) {
+    if (menuToggle && menuOverlay) {
         menuToggle.addEventListener('click', () => {
-            mainNav.classList.toggle('hidden');
-            searchContainer.classList.add('hidden');
+            menuOverlay.classList.remove('hidden');
+            searchOverlay.classList.add('hidden');
+            document.body.style.overflow = 'hidden';
         });
     }
 
-    if (searchToggle && searchContainer) {
+    if (closeMenuBtn && menuOverlay) {
+        closeMenuBtn.addEventListener('click', () => {
+            menuOverlay.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        });
+    }
+
+    if (searchToggle && searchOverlay) {
         searchToggle.addEventListener('click', () => {
-            searchContainer.classList.toggle('hidden');
-            mainNav.classList.add('hidden');
+            searchOverlay.classList.remove('hidden');
+            menuOverlay.classList.add('hidden');
+            document.body.style.overflow = 'hidden';
             searchInput.focus();
         });
     }
-}
 
-function setupSearch() {
-    const searchInput = document.getElementById('searchInput');
-    const searchButton = document.getElementById('searchButton');
-    if (!searchInput || !searchButton) return;
+    if (closeSearchBtn && searchOverlay) {
+        closeSearchBtn.addEventListener('click', () => {
+            searchOverlay.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        });
+    }
 
-    const handleSearch = () => {
-        const query = searchInput.value.toLowerCase().trim();
-        if (query) {
-            const debaterFound = Object.keys(debatersData).find(name => name.toLowerCase().includes(query));
-            if (debaterFound) {
-                window.location.href = `profile.html?name=${encodeURIComponent(debaterFound)}`;
-            } else {
-                alert('Debater tidak ditemukan.');
+    const searchButtonOverlay = document.getElementById('search-button-overlay');
+    if (searchInput && searchButtonOverlay) {
+        const handleSearch = () => {
+            const query = searchInput.value.toLowerCase().trim();
+            if (query) {
+                const debaterFound = Object.keys(debatersData).find(name => name.toLowerCase().includes(query));
+                if (debaterFound) {
+                    window.location.href = `profile.html?name=${encodeURIComponent(debaterFound)}`;
+                } else {
+                    alert('Debater tidak ditemukan.');
+                }
+                searchOverlay.classList.add('hidden');
+                document.body.style.overflow = 'auto';
             }
-        }
-    };
+        };
 
-    searchButton.addEventListener('click', handleSearch);
-    searchInput.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') {
-            handleSearch();
-        }
-    });
+        searchButtonOverlay.addEventListener('click', handleSearch);
+        searchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                handleSearch();
+            }
+        });
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     populateDebaterData();
-    setupNavigation();
-    setupSearch();
+    setupOverlayNavigation();
 
     const path = window.location.pathname;
     if (path.includes('profile.html')) {
