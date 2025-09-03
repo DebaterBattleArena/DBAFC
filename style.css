@@ -5,8 +5,8 @@
     --text-secondary: #999999;
     --accent-yellow: #f8c105;
     --border-color: #333333;
-    --win-color: #4CAF50; /* Hijau untuk Win */
-    --loss-color: #F44336; /* Merah untuk Loss */
+    --win-color: #4CAF50;
+    --loss-color: #F44336;
 }
 
 * {
@@ -35,6 +35,9 @@ header {
     background: var(--dark-bg);
     padding: 1rem 5%;
     border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 500;
 }
 
 .header-top {
@@ -64,65 +67,121 @@ header {
     font-size: 1.5rem;
 }
 
-.search-container {
+/* Overlay Styling */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    padding: 1rem 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    visibility: visible;
+}
+
+.overlay.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* Search Overlay */
+.search-container-overlay {
+    width: 90%;
+    max-width: 600px;
     display: flex;
     align-items: center;
-    background-color: var(--border-color);
-    border-radius: 5px;
-    overflow: hidden;
+    gap: 0.5rem;
+    position: relative;
 }
 
-.search-container.hidden {
-    display: none;
-}
-
-#searchInput {
+.search-container-overlay #searchInput {
     flex-grow: 1;
-    padding: 0.75rem;
-    background-color: transparent;
-    border: none;
+    padding: 1rem;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
     color: var(--text-primary);
-    font-size: 1rem;
-    text-transform: uppercase;
+    font-size: 1.2rem;
+    border-radius: 5px;
     outline: none;
 }
 
-#searchInput::placeholder {
-    color: var(--text-secondary);
-}
-
-#searchButton {
-    padding: 0.75rem 1rem;
+.search-container-overlay #search-button-overlay {
+    padding: 1rem 1.5rem;
     background-color: var(--accent-yellow);
     border: none;
     color: var(--dark-bg);
-    cursor: pointer;
     font-weight: 700;
-    height: 100%;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
-.main-nav {
-    width: 100%;
+.overlay .close-btn {
+    position: absolute;
+    top: -2rem;
+    right: 0;
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Menu Overlay */
+.main-nav-overlay {
+    width: 90%;
+    max-width: 400px;
     text-align: left;
-    margin-top: 1rem;
+    position: relative;
+    padding-top: 5rem;
 }
 
-.main-nav.hidden {
-    display: none;
+.main-nav-overlay .menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
 }
 
-.main-nav ul {
+.main-nav-overlay .menu-header #country-select {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.main-nav-overlay ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.main-nav ul li a {
+.main-nav-overlay ul li a {
     display: block;
-    padding: 0.75rem 0;
+    padding: 1rem 0;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
+    font-size: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.main-nav-overlay .social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.main-nav-overlay .social-icons a {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
 }
 
 main {
@@ -140,26 +199,163 @@ h2.page-title {
     margin-bottom: 2rem;
 }
 
+/* Home Page Specifics */
+.upcoming-section {
+    margin-bottom: 2rem;
+}
+
 .section-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .section-header h2 {
-    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
     font-weight: 900;
     text-transform: uppercase;
-    font-size: 1.5rem;
 }
 
 .section-header a {
     color: var(--accent-yellow);
+    font-weight: 700;
     font-size: 0.9rem;
     text-transform: uppercase;
 }
 
+.upcoming-event-container {
+    position: relative;
+    width: 100%;
+    background-color: var(--card-bg);
+}
+
+.event-timer {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 0.5rem;
+    padding: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    background-color: #333;
+    text-align: center;
+}
+
+.event-timer .timer-value {
+    font-size: 2rem;
+}
+
+.event-timer .timer-label {
+    font-size: 0.7rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+}
+
+.event-poster {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    overflow: hidden;
+}
+
+.event-poster img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.event-details-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
+    color: var(--text-primary);
+}
+
+.event-details-overlay .event-date-location {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.event-details-overlay .event-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.event-details-overlay .buy-tickets-btn {
+    display: inline-block;
+    background-color: var(--accent-yellow);
+    color: var(--dark-bg);
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.event-details-overlay .buy-tickets-btn:hover {
+    background-color: var(--text-primary);
+}
+
+.news-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.news-card {
+    background-color: var(--card-bg);
+    overflow: hidden;
+    position: relative;
+    display: block;
+}
+
+.news-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.news-card.main-news {
+    grid-column: 1 / -1;
+}
+
+.news-card .news-info {
+    padding: 1rem;
+}
+
+.news-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.news-card h4 {
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.news-card .read-more {
+    color: var(--accent-yellow);
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+/* ... Kode CSS lainnya ... */
+/* Profile, ranking, dan archive page styling dari kode Anda tetap relevan dan bisa digabungkan di sini */
 .poster-container {
     background-color: var(--card-bg);
     text-align: center;
@@ -436,9 +632,6 @@ h2.page-title {
     margin-top: 0;
 }
 
-/* ... kode sebelumnya ... */
-
-/* PERBAIKAN TAMPILAN REKOR WLD DI SINI */
 .profile-record {
     background-color: var(--card-bg);
     padding: 1.5rem;
@@ -488,9 +681,8 @@ h2.page-title {
 }
 
 .record-detail-grid {
-    display: flex; /* Mengubah display ke flex */
-    justify-content: center; /* Menengahkan konten di dalamnya */
-    grid-template-columns: 1fr 1fr; /* Properti ini tidak lagi diperlukan, bisa dihapus */
+    display: flex;
+    justify-content: center;
     gap: 1.5rem;
 }
 
@@ -498,7 +690,7 @@ h2.page-title {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    text-align: center; /* Menengahkan teks di dalam kolom */
+    text-align: center;
 }
 
 .detail-column h5 {
@@ -510,7 +702,7 @@ h2.page-title {
 
 .detail-item {
     display: flex;
-    justify-content: center; /* Menengahkan item individu */
+    justify-content: center;
     align-items: center;
     font-size: 0.9rem;
 }
@@ -523,8 +715,6 @@ h2.page-title {
     font-weight: bold;
     color: var(--text-primary);
 }
-/* AKHIR PERBAIKAN TAMPILAN WLD */
-
 
 .match-history-section {
     margin-top: 3rem;
@@ -665,9 +855,18 @@ footer p {
         font-size: 0.8rem;
     }
 
-    /* Menengahkan tulisan BREAKDOWN di mobile */
     .match-history-section h4,
     .profile-record h4 {
         text-align: center;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 768px) {
+    .news-grid {
+        grid-template-columns: 2fr 1fr;
     }
 }
