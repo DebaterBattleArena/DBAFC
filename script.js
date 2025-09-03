@@ -459,30 +459,34 @@ const points = {
     'Kalah Main Card': 0
 };
 
-// --- Fungsi Countdown Timer ---
+// --- Fungsi Countdown Timer yang Diperbarui ---
 function updateCountdown() {
+    // Tanggal acara yang akan datang
     const eventDate = new Date("September 20, 2025 20:00:00").getTime();
     const now = new Date().getTime();
     const distance = eventDate - now;
 
-    // Menghitung hari, jam, dan menit
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     const daysElement = document.getElementById('days-value');
     const hoursElement = document.getElementById('hours-value');
     const minutesElement = document.getElementById('minutes-value');
+    // Tambahkan elemen seconds jika Anda ingin menampilkan detik
+    // const secondsElement = document.getElementById('seconds-value');
 
     if (distance > 0) {
         if (daysElement) daysElement.textContent = days.toString().padStart(2, '0');
         if (hoursElement) hoursElement.textContent = hours.toString().padStart(2, '0');
         if (minutesElement) minutesElement.textContent = minutes.toString().padStart(2, '0');
+        // if (secondsElement) secondsElement.textContent = seconds.toString().padStart(2, '0');
     } else {
-        // Jika hitung mundur selesai
         if (daysElement) daysElement.textContent = "00";
         if (hoursElement) hoursElement.textContent = "00";
         if (minutesElement) minutesElement.textContent = "00";
+        // if (secondsElement) secondsElement.textContent = "00";
     }
 }
 
@@ -783,16 +787,17 @@ function setupSearch() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Panggil fungsi utama saat halaman dimuat
     populateDebaterData();
     setupNavigation();
     setupSearch();
     
-    // Perbarui countdown setiap detik
-    setInterval(updateCountdown, 1000);
-
-    // Panggil fungsi rendering sesuai dengan halaman yang sedang dibuka
+    // Panggil fungsi countdown di halaman yang diperlukan
     const path = window.location.pathname;
+    if (path.includes('index.html') || path === '/') {
+        updateCountdown();
+        setInterval(updateCountdown, 1000); // Perbarui setiap detik
+    }
+    
     if (path.includes('profile.html')) {
         const urlParams = new URLSearchParams(window.location.search);
         if (urlParams.has('name')) {
