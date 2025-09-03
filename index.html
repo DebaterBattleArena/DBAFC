@@ -36,35 +36,40 @@
     </header>
 
     <main>
-        <section class="upcoming-section">
-            <div class="section-header">
-                <h2>COMING SOON</h2>
-                <a href="archive.html">PAST EVENTS ></a>
+        <div class="main-event-container">
+            <div class="event-nav">
+                <a href="#" class="event-nav-link active">BERIKUTNYA</a>
+                <a href="#" class="event-nav-link">GELARAN SEBELUMNYA <span class="arrow">></span></a>
             </div>
-            <div class="poster-container">
-                <img src="images/Nama Proyek 72.png" alt="Upcoming Event">
-                <div class="event-details-overlay">
-                    <div class="countdown-timer">
-                        <div class="countdown-box">
-                            <span class="value"></span>
-                            <span class="label">DAY</span>
-                        </div>
-                        <div class="countdown-box">
-                            <span class="value"></span>
-                            <span class="label">HOURS</span>
-                        </div>
-                        <div class="countdown-box">
-                            <span class="value"></span>
-                            <span class="label">MINUTES</span>
+            <div class="event-image-container">
+                <img src="images/Nama Proyek 72.png" alt="Upcoming Event DBA 3" class="event-image">
+                <div class="event-info-overlay">
+                    <div class="event-details-top">
+                        <div class="event-countdown-wrapper">
+                            <div class="countdown-box">
+                                <span class="value" id="days-value"></span>
+                                <span class="label">HARI</span>
+                            </div>
+                            <div class="countdown-box">
+                                <span class="value" id="hours-value"></span>
+                                <span class="label">JAM</span>
+                            </div>
+                            <div class="countdown-box">
+                                <span class="value" id="minutes-value"></span>
+                                <span class="label">MENIT</span>
+                            </div>
                         </div>
                     </div>
-                    <p>SEP 20 (SAT) 8:00 WIB</p>
-                    <p>DBA, INDONESIA</p>
-                    <h3>DBA 3: INDONESIA vs MALAYSIA 2</h3>
-                    <button class="buy-tickets">WAITING NOW</button>
+                    <div class="event-details-bottom">
+                        <p class="event-date-location">SEP 20 (SAB) 8:00 WIB • DBA, INDONESIA</p>
+                        <p class="event-title">DBA 3: INDONESIA VS MALAYSIA 2</p>
+                    </div>
                 </div>
             </div>
-        </section>
+            <div class="buy-ticket-container">
+                <button class="buy-tickets">BELI TIKET</button>
+            </div>
+        </div>
 
         <section class="news-section">
             <h2>LATEST NEWS</h2>
