@@ -5,8 +5,8 @@
     --text-secondary: #999999;
     --accent-yellow: #f8c105;
     --border-color: #333333;
-    --win-color: #4CAF50; /* Hijau untuk Win */
-    --loss-color: #F44336; /* Merah untuk Loss */
+    --win-color: #4CAF50;
+    --loss-color: #F44336;
 }
 
 * {
@@ -160,16 +160,6 @@ h2.page-title {
     text-transform: uppercase;
 }
 
-.poster-container {
-    background-color: var(--card-bg);
-    text-align: center;
-}
-
-.poster-container img {
-    width: 100%;
-    display: block;
-}
-
 .event-details {
     padding: 1.5rem;
 }
@@ -183,23 +173,6 @@ h2.page-title {
 .event-details p {
     color: var(--text-secondary);
     font-size: 0.9rem;
-}
-
-.buy-tickets {
-    background-color: var(--card-bg);
-    color: var(--accent-yellow);
-    border: 1px solid var(--accent-yellow);
-    padding: 0.75rem 2rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    cursor: pointer;
-    margin-top: 1rem;
-    transition: all 0.3s ease;
-}
-
-.buy-tickets:hover {
-    background-color: var(--accent-yellow);
-    color: var(--dark-bg);
 }
 
 .related-videos {
@@ -322,7 +295,6 @@ h2.page-title {
     color: var(--text-secondary);
 }
 
-/* Profile Page - List of Debaters */
 .profile-main-section {
     padding-top: 2rem;
 }
@@ -360,7 +332,6 @@ h2.page-title {
     font-size: 0.9rem;
 }
 
-/* Specific Debater Profile */
 .single-profile-card {
     background-color: var(--dark-bg);
     padding: 0;
@@ -429,16 +400,12 @@ h2.page-title {
     color: var(--text-primary);
 }
 
-
 .profile-content {
     background-color: var(--card-bg);
     padding: 2rem 5%;
     margin-top: 0;
 }
 
-/* ... kode sebelumnya ... */
-
-/* PERBAIKAN TAMPILAN REKOR WLD DI SINI */
 .profile-record {
     background-color: var(--card-bg);
     padding: 1.5rem;
@@ -488,9 +455,8 @@ h2.page-title {
 }
 
 .record-detail-grid {
-    display: flex; /* Mengubah display ke flex */
-    justify-content: center; /* Menengahkan konten di dalamnya */
-    grid-template-columns: 1fr 1fr; /* Properti ini tidak lagi diperlukan, bisa dihapus */
+    display: flex;
+    justify-content: center;
     gap: 1.5rem;
 }
 
@@ -498,7 +464,7 @@ h2.page-title {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    text-align: center; /* Menengahkan teks di dalam kolom */
+    text-align: center;
 }
 
 .detail-column h5 {
@@ -510,7 +476,7 @@ h2.page-title {
 
 .detail-item {
     display: flex;
-    justify-content: center; /* Menengahkan item individu */
+    justify-content: center;
     align-items: center;
     font-size: 0.9rem;
 }
@@ -523,8 +489,6 @@ h2.page-title {
     font-weight: bold;
     color: var(--text-primary);
 }
-/* AKHIR PERBAIKAN TAMPILAN WLD */
-
 
 .match-history-section {
     margin-top: 3rem;
@@ -539,7 +503,6 @@ h2.page-title {
     margin-bottom: 1rem;
 }
 
-/* Ranking Page */
 .ranking-main-section {
     padding-top: 2rem;
 }
@@ -613,7 +576,6 @@ h2.page-title {
     color: var(--accent-yellow);
 }
 
-/* Footer */
 footer {
     text-align: center;
     padding: 2rem;
@@ -632,192 +594,136 @@ footer p {
     margin: 0 0.5rem;
 }
 
-/* Perubahan untuk tampilan mobile (max-width: 768px) */
-@media (max-width: 768px) {
-    .header-right {
-        gap: 0.5rem;
-    }
-    .profile-info-overlay h3 {
-        font-size: 2rem;
-    }
-    .profile-info-overlay .details {
-        flex-direction: row;
-        justify-content: space-between;
-        gap: 0.5rem;
-        margin-top: 1rem;
-        flex-wrap: nowrap;
-    }
-
-    .profile-info-overlay .details div {
-        flex-grow: 1;
-        text-align: center;
-        min-width: 0;
-    }
-
-    .profile-info-overlay .details h4 {
-        font-size: 0.7rem;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-    
-    .profile-info-overlay .details p {
-        font-size: 0.8rem;
-    }
-
-    /* Menengahkan tulisan BREAKDOWN di mobile */
-    .match-history-section h4,
-    .profile-record h4 {
-        text-align: center;
-    }
-}
-/* ========================================================== */
-/* PERUBAHAN TATA LETAK UTAMA */
-/* ========================================================== */
-.upcoming-section {
-    position: relative;
-    color: var(--text-primary);
+/* KODE BARU UNTUK TAMPILAN ONE CHAMPIONSHIP */
+.main-event-container {
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--card-bg);
+    border-radius: 10px;
     overflow: hidden;
     margin-bottom: 2rem;
 }
 
-.poster-container {
-    background-color: transparent; /* Hilangkan background */
-    text-align: left;
+.event-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--card-bg);
+}
+
+.event-nav-link {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+}
+
+.event-nav-link.active {
+    color: var(--text-primary);
+}
+
+.event-nav-link .arrow {
+    color: var(--accent-yellow);
+    margin-left: 5px;
+}
+
+.event-image-container {
     position: relative;
+    padding-bottom: 75%; /* Rasio 4:3 */
 }
 
-.poster-container img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 5px;
-}
-
-/* Overlay untuk detail acara */
-.event-details-overlay {
+.event-image {
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     width: 100%;
-    padding: 2rem;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
-    box-sizing: border-box;
+    height: 100%;
+    object-fit: cover;
 }
 
-.event-details-overlay h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.2rem;
-    font-weight: 900;
-    margin: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-.event-details-overlay p {
-    color: var(--text-secondary);
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-}
-
-.countdown-timer {
+.event-info-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     display: flex;
-    gap: 1.5rem;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    margin-bottom: 1rem;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5));
+}
+
+.event-details-top {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.event-countdown-wrapper {
+    display: flex;
+    gap: 10px;
 }
 
 .countdown-box {
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 0.5rem 1rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 5px 10px;
     border-radius: 5px;
     backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .countdown-box .value {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 900;
+    display: block;
 }
 
 .countdown-box .label {
-    font-size: 0.75rem;
+    font-size: 0.65rem;
     color: var(--text-secondary);
     text-transform: uppercase;
 }
 
-.buy-tickets {
+.event-details-bottom {
+    width: 100%;
+    text-align: left;
+}
+
+.event-date-location {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.event-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.buy-ticket-container {
     background-color: var(--accent-yellow);
-    color: var(--dark-bg);
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.buy-tickets {
+    background: none;
     border: none;
-    padding: 1rem 2.5rem;
+    color: var(--dark-bg);
     text-transform: uppercase;
     font-weight: 900;
-    cursor: pointer;
-    margin-top: 1rem;
     font-size: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-.buy-tickets:hover {
-    background-color: #ffda44;
-}
-
-/* GAYA UNTUK BERITA (ARTIKEL) */
-.news-section {
-    margin-top: 2rem;
-}
-
-.news-section h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    border-bottom: 2px solid var(--border-color);
-    padding-bottom: 0.5rem;
-    margin-bottom: 1.5rem;
-}
-
-.news-article {
-    display: flex;
-    background-color: var(--card-bg);
-    margin-bottom: 1rem;
-    overflow: hidden;
-}
-
-.news-article-image {
-    flex-shrink: 0;
-    width: 150px;
-    height: 100px;
-}
-
-.news-article-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.news-article-content {
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.news-article-content p {
-    font-size: 0.9rem;
-    font-weight: 700;
-    line-height: 1.3;
-    color: var(--text-primary);
-}
-
-@media (max-width: 768px) {
-    .event-details-overlay {
-        padding: 1rem;
-    }
-
-    .event-details-overlay h3 {
-        font-size: 1.5rem;
-    }
+    cursor: pointer;
+    letter-spacing: 1px;
 }
