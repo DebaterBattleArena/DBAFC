@@ -1,7 +1,7 @@
-/* Import font Poppins dari Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+/* Import font Poppins dari Google Fonts dengan berbagai ketebalan */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
 
-/* --- GENERAL STYLING --- */
+/* --- GLOBAL STYLING & RESET --- */
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #000;
@@ -39,7 +39,7 @@ img {
     text-align: left;
     margin-bottom: 40px;
     font-size: clamp(2.5em, 5vw, 3.5em);
-    font-weight: 800;
+    font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
@@ -67,17 +67,18 @@ img {
 
 .logo {
     font-size: 2.5em;
-    font-weight: 800;
+    font-weight: 900;
     color: #fff;
     letter-spacing: -2px;
 }
 
 .nav-links a {
     font-size: 1.2em;
-    font-weight: 600;
+    font-weight: 700;
     margin-left: 30px;
     text-transform: uppercase;
     position: relative;
+    letter-spacing: 1px;
 }
 
 .nav-links a::after {
@@ -88,14 +89,14 @@ img {
     width: 0;
     height: 2px;
     background-color: #ff3300;
-    transition: width 0.3s ease;
+    transition: width 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .nav-links a:hover::after {
     width: 100%;
 }
 
-/* --- HERO SECTION (INDEX PAGE) --- */
+/* --- HERO SECTION --- */
 .hero-image-container {
     position: relative;
     width: 100%;
@@ -106,7 +107,7 @@ img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(0.7);
+    filter: brightness(0.6);
 }
 
 .hero-overlay {
@@ -126,14 +127,14 @@ img {
 
 .event-title {
     font-size: clamp(3em, 8vw, 6em);
-    font-weight: 800;
+    font-weight: 900;
     margin: 0;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 .debaters-names {
     font-size: clamp(2em, 6vw, 4em);
-    font-weight: 700;
+    font-weight: 800;
     margin: 20px 0;
     line-height: 1.2;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
@@ -143,6 +144,8 @@ img {
     font-size: clamp(1em, 2vw, 1.2em);
     margin-bottom: 30px;
     font-weight: 500;
+    letter-spacing: 1px;
+    color: #aaa;
 }
 
 .btn-buy {
@@ -150,14 +153,16 @@ img {
     color: #fff;
     padding: 15px 30px;
     border-radius: 5px;
-    font-weight: bold;
+    font-weight: 700;
     text-transform: uppercase;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 51, 0, 0.4);
 }
 
 .btn-buy:hover {
     background-color: #e62e00;
     transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 51, 0, 0.6);
 }
 
 /* --- ABOUT SECTION --- */
@@ -219,6 +224,7 @@ img {
     font-weight: 600;
     text-transform: uppercase;
     position: relative;
+    letter-spacing: 1px;
 }
 
 .btn-more-info::after {
@@ -295,6 +301,10 @@ img {
     transition: filter 0.5s ease;
 }
 
+.match-images img:first-child {
+    border-right: 1px solid #000;
+}
+
 .match-details {
     padding: 15px;
     text-align: center;
@@ -302,13 +312,14 @@ img {
 
 .match-title {
     font-size: 1.2em;
-    font-weight: bold;
+    font-weight: 700;
     margin-bottom: 5px;
 }
 
 .match-info {
     font-size: 0.9em;
     color: #aaa;
+    font-weight: 500;
 }
 
 /* --- ACHIEVEMENT SECTION --- */
@@ -328,7 +339,7 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
     z-index: 1;
 }
 
@@ -359,7 +370,7 @@ img {
 
 .stat-number {
     font-size: clamp(2em, 5vw, 3.5em);
-    font-weight: 800;
+    font-weight: 900;
     color: #ff3300;
     line-height: 1;
 }
@@ -405,6 +416,7 @@ img {
     text-transform: uppercase;
     font-size: 1.2em;
     margin-bottom: 15px;
+    font-weight: 700;
 }
 
 .footer-column ul {
@@ -414,6 +426,12 @@ img {
 
 .footer-column ul li {
     margin-bottom: 8px;
+    font-weight: 400;
+    color: #ccc;
+}
+
+.footer-column ul li a {
+    color: #ccc;
 }
 
 .footer-bottom {
@@ -421,16 +439,18 @@ img {
     border-top: 1px solid #333;
     padding-top: 20px;
     font-size: 0.9em;
+    color: #777;
 }
 
 .footer-bottom a {
     margin: 0 10px;
+    color: #777;
 }
 
 /* --- STYLING UNTUK HALAMAN RANKINGS --- */
 .rankings-section {
     background-color: #000;
-    padding: 80px 20px;
+    padding: 100px 20px 80px; /* Padding atas lebih besar untuk menghindari navbar */
 }
 
 .ranking-list-container {
@@ -449,7 +469,7 @@ img {
 
 .ranking-list h3 {
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 800;
     font-size: 1.5em;
     margin-top: 0;
     margin-bottom: 20px;
@@ -460,11 +480,12 @@ img {
 .ranking-item {
     display: flex;
     align-items: center;
-    padding: 15px 0;
+    padding: 15px;
     border-bottom: 1px solid #333;
     font-size: 1.2em;
     color: #fff;
     transition: background-color 0.2s ease, transform 0.2s ease;
+    border-radius: 5px;
 }
 
 .ranking-item:last-child {
@@ -478,16 +499,16 @@ img {
 
 .ranking-number {
     font-size: 1.5em;
-    font-weight: 700;
+    font-weight: 900;
     width: 40px;
-    text-align: right;
+    text-align: center;
     margin-right: 20px;
     color: #fff;
 }
 
 .ranking-item:first-child .ranking-number {
     font-size: 2.5em;
-    font-weight: 700;
+    font-weight: 900;
     color: #ff3300;
 }
 
@@ -506,15 +527,19 @@ img {
     border: 2px solid #333;
 }
 
+.debater-info .name-record {
+    display: flex;
+    flex-direction: column;
+}
+
 .debater-info .name {
-    font-weight: 600;
+    font-weight: 700;
     font-size: 1.1em;
 }
 
 .debater-info .record {
     color: #aaa;
     font-size: 0.9em;
-    margin-left: 10px;
 }
 
 .country-flag {
@@ -524,21 +549,16 @@ img {
     border-radius: 2px;
 }
 
-.first-place-info {
-    flex-direction: row;
-    align-items: center;
-}
-
 .first-place-info .name {
     font-size: 1.5em;
     line-height: 1.2;
-    font-weight: 800;
+    font-weight: 900;
 }
 
 /* --- STYLING UNTUK HALAMAN PROFIL --- */
 .profile-section {
     background: #000;
-    padding: 80px 20px;
+    padding: 100px 20px 80px;
 }
 
 .profile-container {
@@ -557,6 +577,7 @@ img {
     border-radius: 10px;
     margin-bottom: 20px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    filter: brightness(0.8);
 }
 
 .profile-info-card {
@@ -599,7 +620,7 @@ img {
 
 .debater-name {
     font-size: clamp(2em, 5vw, 2.5em);
-    font-weight: 800;
+    font-weight: 900;
     margin: 10px 0;
     text-transform: uppercase;
     line-height: 1.2;
@@ -627,7 +648,7 @@ img {
 .detail-value {
     font-size: 1em;
     color: #fff;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .record-card, .match-history-card {
@@ -641,7 +662,7 @@ img {
 
 .record-card h2, .match-history-card h2 {
     font-size: 1.5em;
-    font-weight: 700;
+    font-weight: 800;
     text-transform: uppercase;
     margin: 0 0 20px 0;
 }
@@ -659,7 +680,7 @@ img {
 
 .stat-number {
     font-size: 2.5em;
-    font-weight: 800;
+    font-weight: 900;
 }
 
 .stat-box.win .stat-number { color: #38b000; }
@@ -692,7 +713,7 @@ img {
 
 .opponent-name {
     font-size: 1.2em;
-    font-weight: 600;
+    font-weight: 700;
     color: #fff;
 }
 
@@ -705,7 +726,7 @@ img {
 .match-result {
     padding: 8px 15px;
     border-radius: 5px;
-    font-weight: bold;
+    font-weight: 700;
     text-transform: uppercase;
 }
 
@@ -719,7 +740,7 @@ img {
     color: #fff;
 }
 
-/* --- RESPONSIF SECTIONS --- */
+/* --- RESPONSIVENESS --- */
 @media (max-width: 768px) {
     .nav-container {
         flex-direction: column;
@@ -785,5 +806,22 @@ img {
 
     .first-place-info .name {
         font-size: 1.2em;
+    }
+
+    .ranking-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+    
+    .debater-info {
+        flex-direction: row;
+        margin-top: 10px;
+    }
+
+    .ranking-number {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 5px;
     }
 }
