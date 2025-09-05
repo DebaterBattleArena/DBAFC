@@ -3,175 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Debater Battle Arena (DBA)</title>
+    <title>DBA - Debater Battle Arena</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="header-top">
-            <div class="logo">
-                <img src="images/0730CFBA-7937-49E1-9CC8-4AB31816107A.png" alt="DBA Logo">
-            </div>
-            <div class="header-right">
-                <div class="search-icon"><button id="search-toggle">🔍</button></div>
-                <div class="menu-icon"><button id="menu-toggle">☰</button></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">DBA.</a>
+            <div class="nav-links">
+                <a href="rankings.html">RANKINGS</a>
             </div>
         </div>
-        <div id="search-container" class="search-container hidden">
-            <input type="text" id="searchInput" placeholder="SEARCH">
-            <button id="searchButton">GO</button>
-        </div>
-        <nav id="main-nav" class="main-nav hidden">
-            <ul>
-                <li><a href="index.html">HOMEPAGE</a></li>
-                <li><a href="archive.html">EVENTS</a></li>
-                <li><a href="#">TICKETS</a></li>
-                <li><a href="profile.html">DEBATERS</a></li>
-                <li><a href="ranking.html">RANKINGS</a></li>
-                <li><a href="#">WATCH</a></li>
-                <li><a href="#">SHOP</a></li>
-            </ul>
-        </nav>
-    </header>
+    </nav>
 
     <main>
-        <div class="upcoming-section">
-            <div class="upcoming-content">
-                <div class="countdown-timer">
-                    <div class="countdown-box">
-                        <span class="value" id="days-value"></span>
-                        <span class="label">HARI</span>
-                    </div>
-                    <div class="countdown-box">
-                        <span class="value" id="hours-value"></span>
-                        <span class="label">JAM</span>
-                    </div>
-                    <div class="countdown-box">
-                        <span class="value" id="minutes-value"></span>
-                        <span class="label">MENIT</span>
-                    </div>
-                </div>
-                <div class="main-event-image-container">
-                    <img src="images/Nama Proyek 72.png" alt="Upcoming Event DBA 3" class="main-event-image">
-                </div>
-                <div class="event-title-container">
-                    <h1 class="event-title">DBA 3: INDONESIA VS MALAYSIA 2</h1>
+        <section id="home" class="page-section home-section">
+            <div class="hero-image-container">
+                <img src="images/poster.jpeg" alt="DBA Main Event" class="hero-image">
+                <div class="hero-overlay">
+                    <h1 class="event-title">DBA MADNESS</h1>
+                    <h2 class="debaters-names">HIROO<br>VERSUS<br>RANZT</h2>
+                    <p class="event-details">30 AGUSTUS 2025 | ONLINE EVENT</p>
+                    <a href="#" class="btn-buy">BUY PAY-PER-VIEW TICKET →</a>
                 </div>
             </div>
-            <button class="buy-tickets">BELI TIKET</button>
-        </div>
 
-        <section class="news-section">
-            <h2>LATEST NEWS</h2>
-            <a href="#" class="news-article">
-                <div class="news-article-image">
-                    <img src="images/placeholder_news.jpg" alt="News Image">
+            <div class="event-carousel">
+                <div class="carousel-item">
+                    <img src="images/poster.jpeg" alt="DBA Event 1">
                 </div>
-                <div class="news-article-content">
-                    <p>'Saya Tak Merasa Sebagai Juara' - Akbar Abdullaev Siap Kalahkan Ibragim Dauev Di ONE Fight Night 35</p>
+                <div class="carousel-item">
+                    <img src="images/poster.jpeg" alt="DBA Event 2">
                 </div>
-            </a>
-            <a href="#" class="news-article">
-                <div class="news-article-image">
-                    <img src="images/placeholder_news2.jpg" alt="News Image 2">
-                </div>
-                <div class="news-article-content">
-                    <p>Sekaranglah Saatnya: Tye Ruotolo Ungkap Mengapa Ia Siap Untuk Debut MMA Di ONE Fight Night 35</p>
-                </div>
-            </a>
-            <a href="#" class="news-article">
-                <div class="news-article-image">
-                    <img src="images/placeholder_news3.jpg" alt="News Image 3">
-                </div>
-                <div class="news-article-content">
-                    <p>Hasil ONE Friday Fights 122: Asadula Imangazaliev Raih Kontrak Idaman Lewat KO Atas Panpayak</p>
-                </div>
-            </a>
-        </section>
+            </div>
 
-        <section class="related-videos">
-            <h2>ONGOING MATCHES</h2>
-            <div class="video-list">
-                <div class="video-card">
-                    <img src="images/placeholder_video.jpg" alt="Video Match">
-                    <div class="video-info">
-                        <p class="match-title">Yulz Clover vs Kazz</p>
-                        <p class="match-status win">WIN YULZ</p>
-                    </div>
+            <div class="about-section">
+                <div class="about-video-container">
+                    <img src="images/ring.png" alt="Debate Arena" class="video-thumbnail">
+                    <div class="play-button">▶</div>
                 </div>
-                <div class="video-card">
-                    <img src="images/placeholder_video.jpg" alt="Video Match">
-                    <div class="video-info">
-                        <p class="match-title">Iulian vs Kariz</p>
-                        <p class="match-status pending">PENDING</p>
-                    </div>
+                <div class="about-content">
+                    <h2 class="section-title">ABOUT</h2>
+                    <p>DBA IS A LEADING 360-DEGREE DEBATE SPORTS PLATFORM DEDICATED TO SHOWCASING AND EMPOWERING INDONESIAN YOUNG DEBATERS, WITH DEBATER BATTLE ARENA AS THE PREMIERE CROSSOVER DEBATE EVENT IN INDONESIA.</p>
+                    <p>DBA BATTLE ARENA 3, HOSTED IN JUNE 2024, BROKE THE PAY-PER-VIEW (PPV) RECORD IN ASIA, GARNERING 23 MILLION VIEWS ON YOUTUBE AND 300,018 BUYS ON VIDIO.</p>
+                    <a href="#" class="btn-more-info">FOR MORE INFORMATION →</a>
                 </div>
-                <div class="video-card">
-                    <img src="images/placeholder_video.jpg" alt="Video Match">
-                    <div class="video-info">
-                        <p class="match-title">Ranzt vs Hiroo</p>
-                        <p class="match-status pending">PENDING</p>
-                    </div>
+            </div>
+
+            <div class="achievement-section">
+                <h2 class="section-title">ACHIEVEMENT</h2>
+                <div class="achievement-text">
+                    <p>DBA IS A LEADING 360-DEGREE DEBATE SPORTS PLATFORM DEDICATED TO SHOWCASING AND EMPOWERING INDONESIAN YOUNG DEBATERS, WITH DBA.</p>
                 </div>
-                <div class="video-card">
-                    <img src="images/placeholder_video.jpg" alt="Video Match">
-                    <div class="video-info">
-                        <p class="match-title">Adyy vs Aheng</p>
-                        <p class="match-status pending">PENDING</p>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number">7</span>
+                        <span class="stat-label">EVENTS</span>
                     </div>
-                </div>
-                <div class="video-card">
-                    <img src="images/placeholder_video.jpg" alt="Video Match">
-                    <div class="video-info">
-                        <p class="match-title">Aaron vs Hyruki</p>
-                        <p class="match-status pending">PENDING</p>
+                    <div class="stat-item">
+                        <span class="stat-number">108M+</span>
+                        <span class="stat-label">TOTAL STREAMS</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">1M+</span>
+                        <span class="stat-label">PAY-PER-VIEW-BUYS</span>
                     </div>
                 </div>
             </div>
-            <button class="more-videos">MORE VIDEOS</button>
-        </section>
 
-        <section class="related-videos">
-            <h2>UPCOMING EVENTS</h2>
-            <div class="video-list">
-                <div class="video-card">
-                    <img src="images/placeholder_1x1.jpg" alt="Poster DBA Ragnarok">
-                    <div class="video-info">
-                        <p class="match-title">DBA Ragnarok</p>
-                        <p class="match-status upcoming">UPCOMING</p>
+            <div class="past-events-section">
+                <h2 class="section-title">PAST EVENTS</h2>
+                <div class="events-grid">
+                    <img src="images/poster.jpeg" alt="Event Poster 1">
+                    <img src="images/poster.jpeg" alt="Event Poster 2">
+                    <img src="images/poster.jpeg" alt="Event Poster 3">
+                    <img src="images/poster.jpeg" alt="Event Poster 4">
+                </div>
+            </div>
+
+            <div class="matches-grid-section">
+                <div id="matches-container" class="matches-grid">
+                    </div>
+            </div>
+
+            <div class="footer-section">
+                <div class="footer-content">
+                    <div class="footer-about">
+                        <p>DBA is committed to fostering growth within the debate sports community, offering fans exhilarating experiences and unparalleled access to the thrill of live competition. As we continue to evolve, our goal remains steadfast:</p>
+                    </div>
+                    <div class="footer-links">
+                        <div class="footer-column">
+                            <h3>PAGES</h3>
+                            <ul>
+                                <li><a href="index.html">HOME</a></li>
+                                <li><a href="#">MERCHANDISE</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h3>CONTACT</h3>
+                            <ul>
+                                <li><a href="mailto:official@dbacombat.com">OFFICIAL@DBACOMBAT.COM</a></li>
+                                <li>BEKASI, INDONESIA</li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h3>SOCIAL MEDIA</h3>
+                            <ul>
+                                <li><a href="#">INSTAGRAM</a></li>
+                                <li><a href="#">YOUTUBE</a></li>
+                                <li><a href="#">TIKTOK</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="video-card">
-                    <img src="images/placeholder_1x1.jpg" alt="Poster DBA Battle Memes">
-                    <div class="video-info">
-                        <p class="match-title">DBA Battle Memes</p>
-                        <p class="match-status upcoming">UPCOMING</p>
-                    </div>
-                </div>
-                <div class="video-card">
-                    <img src="images/placeholder_1x1.jpg" alt="Poster DBA 4">
-                    <div class="video-info">
-                        <p class="match-title">DBA 4</p>
-                        <p class="match-status upcoming">UPCOMING</p>
-                    </div>
+                <div class="footer-bottom">
+                    <p>© 2025 DBA Combat all rights</p>
+                    <p><a href="#">Privacy & Terms &</a></p>
                 </div>
             </div>
         </section>
     </main>
-
-    <footer>
-        <p>SCROLL TO TOP</p>
-        <div class="social-icons">
-            <a href="#"><img src="images/facebook-icon.png" alt="Facebook"></a>
-            <a href="#"><img src="images/x-icon.png" alt="X"></a>
-            <a href="#"><img src="images/instagram-icon.png" alt="Instagram"></a>
-            <a href="#"><img src="images/youtube-icon.png" alt="YouTube"></a>
-        </div>
-        <p>&copy; 2025 Debater Battle Arena. All Rights Reserved.</p>
-        <p>Privacy Policy | Terms of Use</p>
-    </footer>
-
+    
     <script src="script.js"></script>
 </body>
 </html>
