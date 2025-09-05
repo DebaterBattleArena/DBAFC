@@ -3,78 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ranking Debater - DBA</title>
+    <title>DBA - Debater Rankings</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div id="search-overlay" class="overlay hidden">
-        <div class="search-container-overlay">
-            <input type="text" id="searchInput" placeholder="CARI">
-            <button id="search-button-overlay">GO</button>
-            <button id="close-search-overlay" class="close-btn">&times;</button>
-        </div>
-    </div>
-
-    <div id="menu-overlay" class="overlay hidden">
-        <nav class="main-nav-overlay">
-            <div class="menu-header">
-                <select name="country" id="country-select">
-                    <option value="indonesia">INDONESIA</option>
-                    <option value="malaysia">MALAYSIA</option>
-                </select>
-                <button id="close-menu-overlay" class="close-btn">&times;</button>
-            </div>
-            <ul>
-                <li><a href="index.html">HOMEPAGE</a></li>
-                <li><a href="archive.html">EVENTS</a></li>
-                <li><a href="#">TICKETS</a></li>
-                <li><a href="debater.html">DEBATERS</a></li>
-                <li><a href="ranking.html">RANKINGS</a></li>
-                <li><a href="#">WATCH</a></li>
-                <li><a href="#">SHOP <i class="fas fa-external-link-alt"></i></a></li>
-            </ul>
-        </nav>
-    </div>
-
-    <header>
-        <div class="header-top">
-            <div class="logo">
-                <img src="images/Nama Proyek 72.png" alt="DBA Logo">
-            </div>
-            <div class="header-right">
-                <button id="search-toggle" class="search-icon">
-                    <i class="fas fa-search"></i>
-                </button>
-                <button id="menu-toggle" class="menu-icon">
-                    <i class="fas fa-bars"></i>
-                </button>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">DBA.</a>
+            <div class="nav-links">
+                <a href="rankings.html">RANKINGS</a>
             </div>
         </div>
-    </header>
+    </nav>
 
     <main>
-        <section class="ranking-main-section">
-            <h2 class="page-title">DEBATER RANKINGS</h2>
-            <div id="ranking-container">
+        <section id="rankings" class="page-section rankings-section">
+            <h2 class="section-title">RANKINGS</h2>
+            <div id="rankings-container" class="ranking-list-container">
                 </div>
         </section>
     </main>
 
-    <footer>
-        <a href="#top">SCROLL TO TOP</a>
-        <div class="social-icons">
-            <a href="#"><img src="images/facebook-icon.png" alt="Facebook"></a>
-            <a href="#"><img src="images/x-icon.png" alt="X"></a>
-            <a href="#"><img src="images/instagram-icon.png" alt="Instagram"></a>
-            <a href="#"><img src="images/youtube-icon.png" alt="YouTube"></a>
+    <div class="footer-section">
+        <div class="footer-content">
+            <div class="footer-about">
+                <p>DBA is committed to fostering growth within the debate sports community, offering fans exhilarating experiences and unparalleled access to the thrill of live competition. As we continue to evolve, our goal remains steadfast:</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>PAGES</h3>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="#">MERCHANDISE</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>CONTACT</h3>
+                    <ul>
+                        <li><a href="mailto:official@dbacombat.com">OFFICIAL@DBACOMBAT.COM</a></li>
+                        <li>BEKASI, INDONESIA</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>SOCIAL MEDIA</h3>
+                    <ul>
+                        <li><a href="#">INSTAGRAM</a></li>
+                        <li><a href="#">YOUTUBE</a></li>
+                        <li><a href="#">TIKTOK</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <p>&copy; 2025 Debater Battle Arena. All Rights Reserved.</p>
-        <p>Privacy Policy | Terms of Use</p>
-    </footer>
-
+        <div class="footer-bottom">
+            <p>© 2025 DBA Combat all rights</p>
+            <p><a href="#">Privacy & Terms &</a></p>
+        </div>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
