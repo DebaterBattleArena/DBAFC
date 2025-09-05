@@ -15,7 +15,7 @@ body {
 }
 
 a {
-    color: #fff;
+    color: inherit; /* Menggunakan warna teks induk */
     text-decoration: none;
     transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -39,7 +39,7 @@ img {
     text-align: left;
     margin-bottom: 40px;
     font-size: clamp(2.5em, 5vw, 3.5em);
-    font-weight: 900;
+    font-weight: 900; /* Extra bold */
     text-transform: uppercase;
     letter-spacing: 2px;
 }
@@ -49,11 +49,12 @@ img {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.95); /* Lebih solid */
     z-index: 1000;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(8px); /* Blur lebih kuat */
+    -webkit-backdrop-filter: blur(8px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Tambah shadow */
 }
 
 .nav-container {
@@ -66,26 +67,29 @@ img {
 }
 
 .logo {
-    font-size: 2.5em;
+    font-size: clamp(1.8em, 4vw, 2.5em); /* Ukuran logo responsif */
     font-weight: 900;
     color: #fff;
-    letter-spacing: -2px;
+    letter-spacing: -1.5px;
+    cursor: pointer;
 }
 
 .nav-links a {
-    font-size: 1.2em;
+    font-size: clamp(1em, 2vw, 1.2em); /* Ukuran link responsif */
     font-weight: 700;
     margin-left: 30px;
     text-transform: uppercase;
     position: relative;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
+    color: #fff;
+    padding-bottom: 5px; /* Tambah padding agar garis bawah tidak terlalu dekat */
 }
 
 .nav-links a::after {
     content: '';
     position: absolute;
     left: 0;
-    bottom: -5px;
+    bottom: 0; /* Ubah ke 0 agar pas dengan padding-bottom */
     width: 0;
     height: 2px;
     background-color: #ff3300;
@@ -101,13 +105,14 @@ img {
     position: relative;
     width: 100%;
     height: 100vh;
+    min-height: 500px; /* Minimal tinggi */
 }
 
 .hero-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(0.6);
+    filter: brightness(0.5); /* Lebih gelap */
 }
 
 .hero-overlay {
@@ -116,20 +121,22 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, transparent 50%);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, transparent 50%); /* Lebih solid di bawah */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: #fff;
+    padding: 20px; /* Padding agar tidak terlalu mepet di mobile */
 }
 
 .event-title {
     font-size: clamp(3em, 8vw, 6em);
     font-weight: 900;
     margin: 0;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8); /* Shadow lebih kuat */
+    line-height: 1.1;
 }
 
 .debaters-names {
@@ -138,6 +145,7 @@ img {
     margin: 20px 0;
     line-height: 1.2;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase; /* Tambah uppercase */
 }
 
 .event-details {
@@ -145,7 +153,7 @@ img {
     margin-bottom: 30px;
     font-weight: 500;
     letter-spacing: 1px;
-    color: #aaa;
+    color: #bbb; /* Warna lebih terang */
 }
 
 .btn-buy {
@@ -155,14 +163,14 @@ img {
     border-radius: 5px;
     font-weight: 700;
     text-transform: uppercase;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 4px 15px rgba(255, 51, 0, 0.4);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 20px rgba(255, 51, 0, 0.5); /* Shadow lebih kuat */
 }
 
 .btn-buy:hover {
     background-color: #e62e00;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(255, 51, 0, 0.6);
+    transform: translateY(-5px); /* Efek angkat lebih tinggi */
+    box-shadow: 0 10px 30px rgba(255, 51, 0, 0.7);
 }
 
 /* --- ABOUT SECTION --- */
@@ -171,24 +179,24 @@ img {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 50px 20px;
-    background-color: #111;
+    padding: 80px 20px; /* Padding lebih besar */
+    background-color: #0d0d0d; /* Sedikit lebih terang dari hitam murni */
 }
 
 .about-video-container {
     position: relative;
     width: 90%;
-    max-width: 600px;
-    margin-bottom: 30px;
-    border-radius: 10px;
+    max-width: 700px; /* Max width lebih besar */
+    margin-bottom: 40px; /* Margin lebih besar */
+    border-radius: 12px; /* Radius lebih besar */
     overflow: hidden;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5); /* Shadow lebih kuat */
 }
 
 .video-thumbnail {
     width: 100%;
-    filter: brightness(0.8);
+    filter: brightness(0.7); /* Lebih gelap */
     transition: filter 0.3s ease;
 }
 
@@ -204,27 +212,30 @@ img {
     font-size: 5em;
     color: #fff;
     transition: transform 0.3s ease, color 0.3s ease;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
 }
 
 .about-video-container:hover .play-button {
-    transform: translate(-50%, -50%) scale(1.1);
+    transform: translate(-50%, -50%) scale(1.15); /* Skala lebih besar */
     color: #ff3300;
 }
 
 .about-content p {
-    max-width: 800px;
-    margin: 0 auto 20px;
-    font-size: 1.1em;
+    max-width: 900px; /* Lebar teks lebih besar */
+    margin: 0 auto 30px;
+    font-size: clamp(1em, 1.5vw, 1.15em); /* Ukuran teks responsif */
     font-weight: 400;
     color: #ccc;
+    line-height: 1.8; /* Line height lebih lebar */
 }
 
 .btn-more-info {
-    font-size: 1em;
-    font-weight: 600;
+    font-size: clamp(1em, 1.2vw, 1.1em);
+    font-weight: 700;
     text-transform: uppercase;
     position: relative;
     letter-spacing: 1px;
+    color: #fff;
 }
 
 .btn-more-info::after {
@@ -239,97 +250,110 @@ img {
 
 /* --- PAST EVENTS SECTION --- */
 .past-events-section {
-    padding: 50px 20px;
+    padding: 80px 20px;
     background-color: #000;
 }
 
 .events-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Min width lebih besar */
+    gap: 25px; /* Gap lebih besar */
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .events-grid img {
     width: 100%;
-    height: auto;
-    border-radius: 5px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 180px; /* Fixed height untuk keseragaman */
+    object-fit: cover;
+    border-radius: 8px; /* Radius lebih besar */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    filter: brightness(0.8);
 }
 
 .events-grid img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 5px 20px rgba(255, 51, 0, 0.3);
+    transform: scale(1.03); /* Skala lebih kecil agar tidak terlalu menonjol */
+    box-shadow: 0 8px 25px rgba(255, 51, 0, 0.3);
+    filter: brightness(1);
 }
 
 /* --- MATCHES GRID SECTION --- */
 .matches-grid-section {
-    padding: 50px 20px;
-    background-color: #111;
+    padding: 80px 20px;
+    background-color: #0d0d0d;
 }
 
 .matches-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Min width lebih besar */
+    gap: 30px; /* Gap lebih besar */
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .match-card {
     background-color: #1a1a1a;
-    border-radius: 10px;
+    border-radius: 12px; /* Radius lebih besar */
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .match-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(255, 51, 0, 0.2);
+    transform: translateY(-8px); /* Efek angkat lebih tinggi */
+    box-shadow: 0 10px 30px rgba(255, 51, 0, 0.35); /* Shadow lebih kuat */
 }
 
 .match-images {
     display: flex;
     justify-content: center;
+    position: relative;
+    height: 220px; /* Tinggi gambar match lebih besar */
 }
 
 .match-images img {
     width: 50%;
-    height: 200px;
+    height: 100%;
     object-fit: cover;
-    transition: filter 0.5s ease;
+    filter: brightness(0.8);
+    transition: filter 0.3s ease;
 }
-
 .match-images img:first-child {
-    border-right: 1px solid #000;
+    border-right: 2px solid #000; /* Garis pemisah lebih tebal */
+}
+.match-images:hover img {
+    filter: brightness(1);
 }
 
 .match-details {
-    padding: 15px;
+    padding: 20px; /* Padding lebih besar */
     text-align: center;
+    border-top: 1px solid #2a2a2a; /* Garis pemisah detail */
 }
 
 .match-title {
-    font-size: 1.2em;
-    font-weight: 700;
-    margin-bottom: 5px;
+    font-size: 1.3em;
+    font-weight: 800; /* Lebih tebal */
+    margin-bottom: 8px;
+    text-transform: uppercase;
 }
 
 .match-info {
-    font-size: 0.9em;
+    font-size: 0.95em;
     color: #aaa;
     font-weight: 500;
+    letter-spacing: 0.5px;
 }
 
 /* --- ACHIEVEMENT SECTION --- */
 .achievement-section {
     text-align: center;
-    padding: 50px 20px;
-    background-image: url('images/main-background.png');
+    padding: 80px 20px;
+    background-image: url('images/main-background.png'); /* Pastikan path benar */
     background-size: cover;
     background-position: center;
     position: relative;
+    color: #fff;
 }
 
 .achievement-section::before {
@@ -339,7 +363,7 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.85); /* Overlay lebih gelap */
     z-index: 1;
 }
 
@@ -349,15 +373,18 @@ img {
 }
 
 .achievement-text {
-    max-width: 600px;
-    margin: 0 auto 30px;
+    max-width: 700px; /* Lebar teks lebih besar */
+    margin: 0 auto 40px; /* Margin lebih besar */
+    font-size: clamp(1em, 1.6vw, 1.2em);
+    line-height: 1.7;
+    color: #ccc;
 }
 
 .stats-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    max-width: 800px;
+    max-width: 900px; /* Lebar grid lebih besar */
     margin: 0 auto;
 }
 
@@ -365,26 +392,31 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 15px;
+    margin: 20px; /* Margin lebih besar */
+    min-width: 150px; /* Minimal lebar item */
 }
 
 .stat-number {
-    font-size: clamp(2em, 5vw, 3.5em);
+    font-size: clamp(2.5em, 6vw, 4em); /* Ukuran angka lebih besar */
     font-weight: 900;
     color: #ff3300;
     line-height: 1;
+    text-shadow: 2px 2px 10px rgba(255, 51, 0, 0.4); /* Shadow pada angka */
 }
 
 .stat-label {
-    font-size: clamp(1em, 2vw, 1.2em);
+    font-size: clamp(1em, 2vw, 1.3em); /* Ukuran label lebih besar */
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #fff;
+    margin-top: 5px;
 }
 
 /* --- FOOTER --- */
 .footer-section {
     background-color: #1a1a1a;
-    padding: 50px 20px 20px;
+    padding: 60px 20px 30px; /* Padding lebih besar */
 }
 
 .footer-content {
@@ -392,31 +424,37 @@ img {
     flex-wrap: wrap;
     justify-content: space-between;
     max-width: 1200px;
-    margin: 0 auto 30px;
+    margin: 0 auto 40px; /* Margin lebih besar */
 }
 
 .footer-about {
     flex: 1 1 100%;
-    max-width: 500px;
-    margin-bottom: 20px;
+    max-width: 400px; /* Lebar about lebih kecil di desktop */
+    margin-bottom: 25px;
+    font-size: 0.95em;
+    color: #aaa;
+    line-height: 1.7;
 }
 
 .footer-links {
-    flex: 1 1 100%;
+    flex: 2 1 100%; /* Memakan sisa ruang */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
 .footer-column {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    min-width: 150px; /* Agar kolom tidak terlalu sempit */
 }
 
 .footer-column h3 {
     text-transform: uppercase;
     font-size: 1.2em;
-    margin-bottom: 15px;
-    font-weight: 700;
+    margin-bottom: 18px;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: 0.5px;
 }
 
 .footer-column ul {
@@ -425,19 +463,25 @@ img {
 }
 
 .footer-column ul li {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     font-weight: 400;
     color: #ccc;
 }
 
 .footer-column ul li a {
     color: #ccc;
+    font-size: 0.95em;
+}
+
+.footer-column ul li a:hover {
+    color: #ff3300;
+    transform: translateX(3px);
 }
 
 .footer-bottom {
     text-align: center;
     border-top: 1px solid #333;
-    padding-top: 20px;
+    padding-top: 25px;
     font-size: 0.9em;
     color: #777;
 }
@@ -446,44 +490,54 @@ img {
     margin: 0 10px;
     color: #777;
 }
+.footer-bottom a:hover {
+    color: #fff;
+}
 
-/* --- STYLING UNTUK HALAMAN RANKINGS --- */
+
+/* --- STYLING UNTUK HALAMAN RANKINGS (REVISI TOTAL) --- */
 .rankings-section {
     background-color: #000;
     padding: 100px 20px 80px; /* Padding atas lebih besar untuk menghindari navbar */
+    color: #000; /* Warna teks default untuk section ini */
+}
+
+.rankings-section .section-title {
+    color: #fff; /* Judul section tetap putih */
+    margin-bottom: 60px;
 }
 
 .ranking-list-container {
-    max-width: 800px;
+    max-width: 900px; /* Lebar kontainer ranking lebih besar */
     margin: 0 auto;
 }
 
 .ranking-list {
-    background-color: #1a1a1a;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 30px;
+    background-color: #f0f0f0; /* Latar belakang putih/abu-abu terang */
+    padding: 25px 30px; /* Padding lebih besar */
+    border-radius: 12px; /* Radius lebih besar */
+    margin-bottom: 40px; /* Margin bawah lebih besar */
     text-align: left;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Shadow lebih kuat */
 }
 
 .ranking-list h3 {
     text-transform: uppercase;
-    font-weight: 800;
-    font-size: 1.5em;
+    font-weight: 800; /* Lebih tebal */
+    font-size: clamp(1.4em, 3vw, 1.8em); /* Ukuran judul ranking responsif */
     margin-top: 0;
-    margin-bottom: 20px;
-    color: #fff;
+    margin-bottom: 30px; /* Margin bawah lebih besar */
+    color: #000; /* Warna judul ranking hitam */
     letter-spacing: 1px;
 }
 
 .ranking-item {
     display: flex;
     align-items: center;
-    padding: 15px;
-    border-bottom: 1px solid #333;
-    font-size: 1.2em;
-    color: #fff;
+    padding: 18px 0; /* Padding vertikal lebih besar */
+    border-bottom: 1px solid #e0e0e0; /* Garis bawah lebih halus */
+    font-size: clamp(1em, 1.5vw, 1.2em); /* Ukuran teks responsif */
+    color: #333; /* Warna teks lebih gelap */
     transition: background-color 0.2s ease, transform 0.2s ease;
     border-radius: 5px;
 }
@@ -493,23 +547,24 @@ img {
 }
 
 .ranking-item:hover {
-    background-color: #222;
+    background-color: #e9e9e9; /* Hover lebih terang */
     transform: translateX(5px);
 }
 
 .ranking-number {
-    font-size: 1.5em;
+    font-size: clamp(1.5em, 2.5vw, 1.8em); /* Ukuran angka ranking lebih besar */
     font-weight: 900;
-    width: 40px;
-    text-align: center;
-    margin-right: 20px;
-    color: #fff;
+    width: 50px; /* Lebar lebih besar untuk angka */
+    text-align: right;
+    margin-right: 25px; /* Margin lebih besar */
+    color: #666; /* Warna angka default */
 }
 
 .ranking-item:first-child .ranking-number {
-    font-size: 2.5em;
+    font-size: clamp(2.5em, 4vw, 3em); /* Angka #1 jauh lebih besar */
     font-weight: 900;
-    color: #ff3300;
+    color: #ff3300; /* Warna merah */
+    line-height: 0.9;
 }
 
 .debater-info {
@@ -518,13 +573,36 @@ img {
     flex-grow: 1;
 }
 
-.debater-info img.profile-image {
+/* Kotak kosong untuk gambar #1 (4:3 ratio) */
+.debater-info .first-place-image-placeholder {
+    width: 80px; /* Lebar tetap */
+    height: 60px; /* Tinggi disesuaikan untuk 4:3 */
+    background-color: #d0d0d0; /* Warna abu-abu sebagai placeholder */
+    border-radius: 8px; /* Sudut sedikit melengkung */
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Penting jika ada gambar di dalamnya */
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.1); /* Sedikit shadow ke dalam */
+}
+
+/* Untuk kasus jika ada gambar di dalam placeholder */
+.debater-info .first-place-image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.debater-info img.profile-image { /* Untuk gambar di peringkat > #1 */
     width: 60px;
     height: 60px;
     border-radius: 50%;
     object-fit: cover;
     margin-right: 15px;
-    border: 2px solid #333;
+    border: 2px solid #ccc; /* Border lebih terang */
+    flex-shrink: 0; /* Hindari menyusut */
 }
 
 .debater-info .name-record {
@@ -535,11 +613,15 @@ img {
 .debater-info .name {
     font-weight: 700;
     font-size: 1.1em;
+    color: #000;
+    text-transform: uppercase;
+    line-height: 1.2;
 }
 
 .debater-info .record {
-    color: #aaa;
+    color: #777; /* Warna rekor lebih gelap */
     font-size: 0.9em;
+    font-weight: 500;
 }
 
 .country-flag {
@@ -547,12 +629,26 @@ img {
     height: auto;
     margin-left: auto;
     border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
-.first-place-info .name {
-    font-size: 1.5em;
-    line-height: 1.2;
+/* Penyesuaian khusus untuk item #1 */
+.ranking-item:first-child {
+    background-color: #fff; /* Latar belakang putih untuk #1 */
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(255, 51, 0, 0.1); /* Shadow merah */
+    border-bottom: none;
+    padding: 25px 30px;
+}
+
+.ranking-item:first-child .debater-info .name {
+    font-size: clamp(1.4em, 2.5vw, 1.6em); /* Nama #1 lebih besar */
     font-weight: 900;
+    color: #000;
+}
+.ranking-item:first-child .debater-info .record {
+    font-size: 1em;
+    color: #444;
 }
 
 /* --- STYLING UNTUK HALAMAN PROFIL --- */
@@ -562,7 +658,7 @@ img {
 }
 
 .profile-container {
-    max-width: 600px;
+    max-width: 650px; /* Lebar kontainer profil lebih besar */
     margin: 0 auto;
     color: #fff;
     padding-bottom: 50px;
@@ -570,42 +666,44 @@ img {
 
 .profile-header-image {
     width: 100%;
-    height: 350px;
+    height: 380px; /* Tinggi gambar header lebih besar */
     background-size: cover;
     background-position: center top;
     position: relative;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-    filter: brightness(0.8);
+    border-radius: 12px; /* Radius lebih besar */
+    margin-bottom: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    filter: brightness(0.7); /* Lebih gelap */
 }
 
 .profile-info-card {
     background: #111;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 30px; /* Padding lebih besar */
+    border-radius: 12px;
     text-align: left;
-    margin-top: -100px;
+    margin-top: -120px; /* Lebih naik */
     position: relative;
     z-index: 2;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 .profile-status {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 0.9em;
+    font-size: 0.95em;
     font-weight: 600;
     color: #aaa;
     text-transform: uppercase;
+    margin-bottom: 15px;
 }
 
 .status-indicator {
-    padding: 5px 10px;
-    border-radius: 5px;
+    padding: 6px 12px; /* Padding lebih besar */
+    border-radius: 6px;
     font-weight: 700;
-    font-size: 0.8em;
+    font-size: 0.85em;
+    letter-spacing: 0.5px;
 }
 
 .status-indicator.active {
@@ -619,52 +717,57 @@ img {
 }
 
 .debater-name {
-    font-size: clamp(2em, 5vw, 2.5em);
+    font-size: clamp(2.2em, 5vw, 2.8em); /* Ukuran nama lebih besar */
     font-weight: 900;
     margin: 10px 0;
     text-transform: uppercase;
-    line-height: 1.2;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
 }
 
 .debater-details {
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    margin-top: 25px;
+    border-top: 1px solid #2a2a2a;
+    padding-top: 20px;
 }
 
 .detail-item {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .detail-label {
     font-weight: 600;
-    font-size: 0.9em;
-    color: #777;
-    width: 100px;
+    font-size: 0.95em;
+    color: #888;
+    width: 120px; /* Lebar label lebih besar */
+    flex-shrink: 0;
 }
 
 .detail-value {
-    font-size: 1em;
+    font-size: 1.05em;
     color: #fff;
     font-weight: 500;
 }
 
 .record-card, .match-history-card {
     background: #111;
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 20px;
+    padding: 30px;
+    border-radius: 12px;
+    margin-top: 25px;
     text-align: left;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 .record-card h2, .match-history-card h2 {
-    font-size: 1.5em;
+    font-size: 1.6em; /* Ukuran judul lebih besar */
     font-weight: 800;
     text-transform: uppercase;
-    margin: 0 0 20px 0;
+    margin: 0 0 25px 0;
+    letter-spacing: 1px;
 }
 
 .record-stats {
@@ -676,10 +779,11 @@ img {
 .stat-box {
     display: flex;
     flex-direction: column;
+    margin: 0 10px;
 }
 
 .stat-number {
-    font-size: 2.5em;
+    font-size: clamp(2em, 5vw, 3em); /* Ukuran angka responsif */
     font-weight: 900;
 }
 
@@ -688,16 +792,17 @@ img {
 .stat-box.draw .stat-number { color: #777; }
 
 .stat-label {
-    font-size: 1em;
+    font-size: clamp(0.9em, 1.5vw, 1.1em);
     color: #fff;
-    font-weight: 400;
+    font-weight: 500;
+    margin-top: 5px;
 }
 
 .match-history-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 0;
+    padding: 18px 0;
     border-bottom: 1px solid #333;
 }
 
@@ -712,22 +817,26 @@ img {
 }
 
 .opponent-name {
-    font-size: 1.2em;
+    font-size: 1.25em; /* Ukuran nama lawan lebih besar */
     font-weight: 700;
     color: #fff;
+    text-transform: uppercase;
 }
 
 .match-details-small {
-    font-size: 0.8em;
+    font-size: 0.9em;
     color: #777;
     margin-top: 5px;
+    font-weight: 400;
 }
 
 .match-result {
     padding: 8px 15px;
-    border-radius: 5px;
+    border-radius: 6px;
     font-weight: 700;
     text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 0.5px;
 }
 
 .match-result.win {
@@ -740,11 +849,12 @@ img {
     color: #fff;
 }
 
-/* --- RESPONSIVENESS --- */
+/* --- RESPONSIVENESS (Diperbarui) --- */
 @media (max-width: 768px) {
     .nav-container {
         flex-direction: column;
         text-align: center;
+        padding: 10px 20px;
     }
 
     .nav-links {
@@ -753,22 +863,24 @@ img {
 
     .nav-links a {
         margin: 0 10px;
+        font-size: 1em;
     }
     
     .section-title {
-        font-size: 2.5em;
+        font-size: 2em;
     }
 
     .hero-image-container {
-        height: 70vh;
+        height: 60vh;
+        min-height: 400px;
     }
 
     .event-title {
-        font-size: 2.5em;
+        font-size: 2.2em;
     }
 
     .debaters-names {
-        font-size: 1.8em;
+        font-size: 1.6em;
     }
 
     .events-grid {
@@ -790,10 +902,12 @@ img {
 
     .footer-about {
         max-width: none;
+        text-align: center;
     }
     
     .footer-links {
         flex-direction: column;
+        align-items: center;
     }
 
     .footer-column {
@@ -801,27 +915,141 @@ img {
     }
 
     .profile-info-card {
-        margin-top: -50px;
+        margin-top: -60px; /* Lebih naik di mobile */
+        padding: 20px;
     }
 
-    .first-place-info .name {
-        font-size: 1.2em;
+    .debater-name {
+        font-size: 2em;
     }
 
+    .record-card h2, .match-history-card h2 {
+        font-size: 1.3em;
+    }
+
+    /* Penyesuaian khusus untuk ranking di mobile */
     .ranking-item {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px;
+        flex-direction: row; /* Tetap row untuk mobile agar tidak terlalu panjang */
+        align-items: center;
+        padding: 12px 0;
+        font-size: 1em;
     }
     
-    .debater-info {
-        flex-direction: row;
-        margin-top: 10px;
+    .ranking-number {
+        width: 35px;
+        font-size: 1.3em;
+        margin-right: 15px;
     }
 
+    .ranking-item:first-child .ranking-number {
+        font-size: 2em;
+    }
+
+    .debater-info img.profile-image, .debater-info .first-place-image-placeholder {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+    }
+    .debater-info .first-place-image-placeholder {
+        height: 37.5px; /* Sesuaikan untuk 4:3 */
+    }
+
+    .debater-info .name {
+        font-size: 1em;
+    }
+    .ranking-item:first-child .debater-info .name {
+        font-size: 1.2em;
+    }
+    .debater-info .record {
+        font-size: 0.8em;
+    }
+
+    .country-flag {
+        width: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.5em;
+    }
+    .nav-links a {
+        font-size: 0.9em;
+        margin-left: 15px;
+    }
+    .hero-overlay {
+        padding: 15px;
+    }
+    .event-title {
+        font-size: 1.8em;
+    }
+    .debaters-names {
+        font-size: 1.4em;
+    }
+    .event-details {
+        font-size: 0.9em;
+    }
+    .btn-buy {
+        padding: 12px 25px;
+        font-size: 0.9em;
+    }
+    .about-content p {
+        font-size: 0.9em;
+    }
+    .btn-more-info {
+        font-size: 0.9em;
+    }
+    .stats-grid {
+        margin: 0;
+    }
+    .stat-item {
+        margin: 10px 0;
+        min-width: unset;
+    }
+    .stat-number {
+        font-size: 2.2em;
+    }
+    .stat-label {
+        font-size: 0.9em;
+    }
+    .footer-column h3 {
+        font-size: 1em;
+    }
+    .footer-column ul li {
+        font-size: 0.85em;
+    }
+    
+    /* Ranking mobile sangat kecil */
+    .ranking-list h3 {
+        font-size: 1.2em;
+    }
+    .ranking-item {
+        padding: 10px 0;
+        font-size: 0.9em;
+    }
     .ranking-number {
-        width: 100%;
-        text-align: left;
-        margin-bottom: 5px;
+        font-size: 1.1em;
+        width: 30px;
+        margin-right: 10px;
+    }
+    .ranking-item:first-child .ranking-number {
+        font-size: 1.8em;
+    }
+    .debater-info img.profile-image, .debater-info .first-place-image-placeholder {
+        width: 40px;
+        height: 40px;
+        margin-right: 8px;
+    }
+    .debater-info .first-place-image-placeholder {
+        height: 30px; /* Sesuaikan untuk 4:3 */
+    }
+    .debater-info .name {
+        font-size: 0.9em;
+    }
+    .ranking-item:first-child .debater-info .name {
+        font-size: 1.1em;
+    }
+    .debater-info .record {
+        font-size: 0.75em;
     }
 }
