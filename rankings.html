@@ -1,67 +1,143 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DBA - Debater Rankings</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
+// Fungsi untuk menghasilkan halaman profil yang direvisi
+function generateProfilePage() {
+    const profileContainer = document.getElementById('profile-container');
+    if (!profileContainer) return;
 
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">DBA.</a>
-            <div class="nav-links">
-                <a href="rankings.html">RANKINGS</a>
-            </div>
-        </div>
-    </nav>
+    const urlParams = new URLSearchParams(window.location.search);
+    const debaterName = urlParams.get('name');
+    const debater = debatersData[debaterName];
 
-    <main>
-        <section id="rankings" class="page-section rankings-section">
-            <h2 class="section-title">RANKINGS</h2>
-            <div id="rankings-container" class="ranking-list-container">
-                </div>
-        </section>
-    </main>
+    if (!debater) {
+        profileContainer.innerHTML = `<p>Debater not found.</p>`;
+        document.getElementById('profile-title').innerText = 'Debater not found';
+        return;
+    }
 
-    <div class="footer-section">
-        <div class="footer-content">
-            <div class="footer-about">
-                <p>DBA is committed to fostering growth within the debate sports community, offering fans exhilarating experiences and unparalleled access to the thrill of live competition. As we continue to evolve, our goal remains steadfast:</p>
-            </div>
-            <div class="footer-links">
-                <div class="footer-column">
-                    <h3>PAGES</h3>
-                    <ul>
-                        <li><a href="index.html">HOME</a></li>
-                        <li><a href="#">MERCHANDISE</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>CONTACT</h3>
-                    <ul>
-                        <li><a href="mailto:official@dbacombat.com">OFFICIAL@DBACOMBAT.COM</a></li>
-                        <li>BEKASI, INDONESIA</li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>SOCIAL MEDIA</h3>
-                    <ul>
-                        <li><a href="#">INSTAGRAM</a></li>
-                        <li><a href="#">YOUTUBE</a></li>
-                        <li><a href="#">TIKTOK</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2025 DBA Combat all rights</p>
-            <p><a href="#">Privacy & Terms &</a></p>
-        </div>
-    </div>
+    // Set judul halaman
+    document.title = `${debaterName} - DBA Profile`;
     
-    <script src="script.js"></script>
-</body>
-</html>
+    // Pastikan container utama memiliki class yang sesuai
+    profileContainer.className = 'profile-page-container';
+
+    // Buat HTML untuk header profil (gambar dan info kanan)
+    const profileHeader = document.createElement('div');
+    profileHeader.className = 'profile-header';
+    profileHeader.style.backgroundImage = `url('${debater.imageUrl}')`;
+
+    const statusActive = debater.status.toLowerCase() === 'active' ? 'active' : 'inactive';
+    const flagUrl = getFlagUrl(debater.country);
+
+    profileHeader.innerHTML = `
+        <div class="profile-header-info-overlay">
+            <div class="header-info-box">
+                <div class="info-item">
+                    <span class="info-label">LIGHT FLYWEIGHT DIVISION</span>
+                    <span class="status-indicator ${statusActive}">${debater.status.toUpperCase()}</span>
+                </div>
+                <h1 class="debater-name-header">${debaterName.toUpperCase()}</h1>
+                <div class="info-item">
+                    <span class="info-label">COUNTRY</span>
+                    <span class="info-value">${debater.country.toUpperCase()}</span>
+                    <img class="country-flag-header" src="${flagUrl}" alt="${debater.country}">
+                </div>
+                <div class="info-item">
+                    <span class="info-label">HEIGHT</span>
+                    <span class="info-value">167 CM | 5,47 FT</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">WEIGHT</span>
+                    <span class="info-value">51 KG | 112,4 LBS</span>
+                </div>
+                
+                <div class="record-container">
+                    <div class="record-row">
+                        <span class="record-title">FIGHT RECORD</span>
+                        <div class="record-stats-group">
+                            <div class="stat-item-record">
+                                <span class="stat-number-record">${debater.record.W}</span>
+                                <span class="stat-label-record">WIN</span>
+                            </div>
+                            <div class="stat-item-record">
+                                <span class="stat-number-record">${debater.record.L}</span>
+                                <span class="stat-label-record">LOSS</span>
+                            </div>
+                            <div class="stat-item-record">
+                                <span class="stat-number-record">${debater.record.D}</span>
+                                <span class="stat-label-record">DRAW</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="record-row kickstriking-record">
+                        <span class="record-title">KICKSTRIKING RECORD</span>
+                        <div class="record-stats-group">
+                            <div class="stat-item-record">
+                                <span class="stat-number-record">0</span>
+                                <span class="stat-label-record">WIN</span>
+                            </div>
+                            <div class="stat-item-record">
+                                <span class="stat-number-record">1</span>
+                                <span class="stat-label-record">LOSS</span>
+                            </div>
+                            <div class="stat-item-record">
+                                <span class="stat-number-record">0</span>
+                                <span class="stat-label-record">DRAW</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+
+    // Buat HTML untuk bagian match history (kotak putih di bawah)
+    const profileMatchHistory = document.createElement('div');
+    profileMatchHistory.className = 'profile-match-history';
+    
+    // Tambahkan header
+    const historyTitle = document.createElement('h2');
+    historyTitle.className = 'section-title-history';
+    historyTitle.innerText = 'BYON RECORD';
+
+    profileMatchHistory.appendChild(historyTitle);
+
+    // Tambahkan setiap item riwayat pertandingan
+    if (debater.matches.length > 0) {
+        debater.matches.forEach(match => {
+            const matchHistoryItem = document.createElement('div');
+            matchHistoryItem.className = 'match-history-item-byon';
+            matchHistoryItem.innerHTML = `
+                <div class="match-info-details">
+                    <div class="opponent-name-byon">VS ${match.opponent.toUpperCase()}</div>
+                    <div class="match-details-byon">
+                        <div class="match-detail-item-byon">
+                            <span class="label-byon">Round</span>
+                            <span class="value-byon">${match.round}</span>
+                        </div>
+                        <div class="match-detail-item-byon">
+                            <span class="label-byon">Time</span>
+                            <span class="value-byon">${match.time}</span>
+                        </div>
+                        <div class="match-detail-item-byon">
+                            <span class="label-byon">Method</span>
+                            <span class="value-byon">${match.method}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="match-result-byon ${match.result.toLowerCase()}">
+                    ${match.result.toUpperCase()}
+                </div>
+            `;
+            profileMatchHistory.appendChild(matchHistoryItem);
+        });
+    } else {
+        const noHistory = document.createElement('p');
+        noHistory.className = 'no-history-text';
+        noHistory.innerText = 'No match history available.';
+        profileMatchHistory.appendChild(noHistory);
+    }
+
+    // Gabungkan semua elemen ke dalam container utama
+    profileContainer.innerHTML = ''; // Hapus konten lama
+    profileContainer.appendChild(profileHeader);
+    profileContainer.appendChild(profileMatchHistory);
+}
