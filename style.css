@@ -1053,3 +1053,270 @@ img {
         font-size: 0.75em;
     }
 }
+/* --- STYLING UNTUK HALAMAN PROFIL (REVISI TOTAL) --- */
+.profile-page-container {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #000;
+}
+
+.profile-header {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Mengisi seluruh viewport */
+    min-height: 700px;
+    background-size: cover;
+    background-position: top center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 0;
+    color: #fff;
+}
+
+.profile-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.8) 100%);
+}
+
+.profile-header-info-overlay {
+    position: absolute;
+    top: 15%; /* Jarak dari atas */
+    right: 5%; /* Jarak dari kanan */
+    width: 400px; /* Lebar info box */
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.7); /* Latar belakang semi-transparan */
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    z-index: 10;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.header-info-box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+}
+
+.info-item:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.info-label {
+    font-size: 0.9em;
+    font-weight: 600;
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.info-value {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #fff;
+}
+
+.debater-name-header {
+    font-size: clamp(2em, 5vw, 3.5em);
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin: 10px 0;
+}
+
+.status-indicator {
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 0.8em;
+}
+
+.status-indicator.active {
+    background-color: #38b000;
+    color: #fff;
+}
+
+.status-indicator.inactive {
+    background-color: #ffb703;
+    color: #000;
+}
+
+.country-flag-header {
+    width: 25px;
+    height: auto;
+    margin-left: 10px;
+    border-radius: 2px;
+}
+
+.record-container {
+    margin-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+}
+
+.record-row {
+    margin-bottom: 20px;
+}
+
+.record-title {
+    font-size: 1.1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    display: block;
+    color: #fff;
+}
+
+.record-stats-group {
+    display: flex;
+    gap: 20px;
+    text-align: center;
+}
+
+.stat-item-record {
+    flex: 1;
+}
+
+.stat-number-record {
+    font-size: 2.5em;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.stat-item-record:nth-child(1) .stat-number-record { color: #38b000; }
+.stat-item-record:nth-child(2) .stat-number-record { color: #ff0000; }
+.stat-item-record:nth-child(3) .stat-number-record { color: #aaa; }
+
+.stat-label-record {
+    font-size: 0.9em;
+    color: #fff;
+    font-weight: 500;
+    display: block;
+}
+
+.profile-match-history {
+    background-color: #fff;
+    padding: 40px 20px;
+    color: #000;
+}
+
+.section-title-history {
+    font-size: clamp(2em, 4vw, 3em);
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #000;
+}
+
+.match-history-item-byon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 600px;
+    margin: 0 auto 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.match-info-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.opponent-name-byon {
+    font-size: 1.4em;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.match-details-byon {
+    display: flex;
+    gap: 15px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.match-detail-item-byon {
+    display: flex;
+    align-items: center;
+}
+
+.label-byon {
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+.match-result-byon {
+    padding: 10px 25px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.1em;
+}
+
+.match-result-byon.win {
+    background-color: #38b000;
+}
+
+.match-result-byon.lose {
+    background-color: #ff0000;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .profile-header-info-overlay {
+        position: static;
+        width: 90%;
+        margin: 20px auto;
+        border: none;
+        backdrop-filter: none;
+        background: none;
+    }
+
+    .profile-header {
+        min-height: 500px;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 480px) {
+    .debater-name-header {
+        font-size: 2em;
+    }
+
+    .stat-number-record {
+        font-size: 2em;
+    }
+
+    .match-history-item-byon {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .match-result-byon {
+        margin-top: 15px;
+    }
+}
